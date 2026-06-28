@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/meal-planner/',
+  base: '/meal_planner/',
   plugins: [react(), tailwindcss()],
   test: {
     globals: true,

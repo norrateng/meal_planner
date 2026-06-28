@@ -1,52 +1,64 @@
 import { useState } from 'react'
 import DayCard from './DayCard'
+import SwapPicker from './SwapPicker'
 import { usePlanStore } from '../utils/planStore'
 
-export default function WeekView({ settings, onOpenMeal }) {
-  const [viewMode, setViewMode] = useState(settings.viewMode ?? 'calendar')
-  const { plan, ratings, regenerate, updateSlot, rateRecipe } = usePlanStore(settings)
+export default function WeekView({ settings, cupboard, onOpenMeal }) {
+  const { plan, ratings, regenerate, swapSlot, rateRecipe, markEaten, archiveAndRegenerate } = usePlanStore(settings, cupboard)
+  const [pickerTarget, setPickerTarget] = useState(null)
 
-  function handleSwap(day, slot) {
-    // Unlock and re-roll that slot via a targeted regeneration
-    updateSlot(day, slot, { locked: false })
-    // For a real swap we'd need a targeted re-pick — simplified: just unlock for now
+  function handleArchive() {
+    const label = window.prompt('Label for this week (e.g. "Week of 28 Jun"):') ?? 'Unnamed week'
+    archiveAndRegenerate(label)
   }
 
-  function handleLock(day, slot) {
-    const current = plan[day]?.slots[slot]
-    if (current) updateSlot(day, slot, { locked: !current.locked })
+  function handleOpenSwap(day, slot) {
+    setPickerTarget({ day, slot })
+  }
+
+  function handleConfirmSwap(recipeId) {
+    swapSlot(pickerTarget.day, pickerTarget.slot, recipeId)
+    setPickerTarget(null)
   }
 
   return (
-    <div className="p-4">
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex rounded-lg overflow-hidden border border-gray-200 text-sm">
-          <button onClick={() => setViewMode('calendar')} className={`px-3 py-1.5 ${viewMode === 'calendar' ? 'bg-green-600 text-white' : 'bg-white text-gray-600'}`}>
-            Calendar
-          </button>
-          <button onClick={() => setViewMode('scroll')} className={`px-3 py-1.5 ${viewMode === 'scroll' ? 'bg-green-600 text-white' : 'bg-white text-gray-600'}`}>
-            Scroll
-          </button>
-        </div>
-        <button onClick={regenerate} className="bg-green-600 text-white text-sm px-4 py-1.5 rounded-lg font-medium">
+    <div className="p-3">
+      <div className="flex items-center justify-end mb-3 gap-2">
+        <button onClick={handleArchive} className="border border-gray-300 text-gray-700 text-sm px-3 py-1.5 rounded-lg font-medium">
+          Archive
+        </button>
+        <button onClick={regenerate} className="bg-green-600 text-white text-sm px-3 py-1.5 rounded-lg font-medium">
           Regenerate
         </button>
       </div>
 
-      <div className={viewMode === 'scroll' ? 'flex flex-col gap-4' : 'grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-7'}>
+      <div className="flex flex-col gap-3">
         {plan.map(dayData => (
           <DayCard
             key={dayData.day}
             dayData={dayData}
             ratings={ratings}
             calorieTarget={settings.calorieTarget}
+            proteinTarget={settings.proteinTarget}
             onOpenMeal={onOpenMeal}
             onRate={rateRecipe}
-            onSwap={handleSwap}
-            onLock={handleLock}
+            onSwap={handleOpenSwap}
+            onMarkEaten={markEaten}
           />
         ))}
       </div>
+
+      {pickerTarget && (
+        <SwapPicker
+          day={pickerTarget.day}
+          slot={pickerTarget.slot}
+          plan={plan}
+          ratings={ratings}
+          cupboard={cupboard}
+          onSelect={handleConfirmSwap}
+          onClose={() => setPickerTarget(null)}
+        />
+      )}
     </div>
   )
 }

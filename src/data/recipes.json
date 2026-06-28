@@ -3,23 +3,102 @@
     "id": "cottage-pie",
     "name": "Cottage Pie",
     "cuisine": "British",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 20,
     "cookTime": 45,
     "defaultBatchSize": 4,
     "prepNotes": "Freeze the finished pie for up to 3 months. Reheat from frozen at 180°C for 45 minutes.",
-    "macrosPerServing": { "calories": 480, "protein": 35, "carbs": 42, "fat": 18 },
+    "macrosPerServing": {
+      "calories": 640,
+      "protein": 35,
+      "carbs": 82,
+      "fat": 18
+    },
     "ingredients": [
-      { "name": "beef mince", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "potatoes", "quantity": 800, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null, "carbContent": 17 },
-      { "name": "carrots", "quantity": 200, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "frozen peas", "quantity": 150, "unit": "g", "aisle": "frozen", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "beef stock cube", "quantity": 2, "unit": "cube", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "Worcestershire sauce", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "soy sauce" },
-      { "name": "tomato puree", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "butter", "quantity": 40, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "whole milk", "quantity": 100, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "oat milk" }
+      {
+        "name": "beef mince",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "potatoes",
+        "quantity": 800,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 17
+      },
+      {
+        "name": "carrots",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "frozen peas",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "frozen",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "beef stock cube",
+        "quantity": 2,
+        "unit": "cube",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "Worcestershire sauce",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "soy sauce"
+      },
+      {
+        "name": "tomato puree",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "butter",
+        "quantity": 40,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "whole milk",
+        "quantity": 100,
+        "unit": "ml",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": "oat milk"
+      }
     ],
     "method": [
       "Peel and chop potatoes, boil until tender (20 min). Drain and mash with butter and milk. Season.",
@@ -34,23 +113,102 @@
     "id": "chicken-tikka-masala",
     "name": "Chicken Tikka Masala",
     "cuisine": "Indian",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 15,
     "cookTime": 40,
     "defaultBatchSize": 4,
     "prepNotes": "Sauce freezes well for 3 months. Marinate chicken overnight for best flavour. Serve with rice or naan.",
-    "macrosPerServing": { "calories": 520, "protein": 45, "carbs": 32, "fat": 20 },
+    "macrosPerServing": {
+      "calories": 680,
+      "protein": 45,
+      "carbs": 72,
+      "fat": 20
+    },
     "ingredients": [
-      { "name": "chicken breast", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "basmati rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
-      { "name": "tinned chopped tomatoes", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "coconut cream", "quantity": 200, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "double cream" },
-      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 4, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": "1 tsp garlic powder" },
-      { "name": "fresh ginger", "quantity": 30, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "1 tsp ground ginger" },
-      { "name": "tikka masala paste", "quantity": 60, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": "2 tbsp curry powder + 1 tbsp garam masala" },
-      { "name": "Greek yoghurt", "quantity": 150, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "vegetable oil", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chicken breast",
+        "quantity": 700,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 77
+      },
+      {
+        "name": "tinned chopped tomatoes",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "coconut cream",
+        "quantity": 200,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "double cream"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 4,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "1 tsp garlic powder"
+      },
+      {
+        "name": "fresh ginger",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "1 tsp ground ginger"
+      },
+      {
+        "name": "tikka masala paste",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "2 tbsp curry powder + 1 tbsp garam masala"
+      },
+      {
+        "name": "Greek yoghurt",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "vegetable oil",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Mix chicken with yoghurt and half the tikka paste. Marinate 30 min (or overnight).",
@@ -65,23 +223,102 @@
     "id": "spaghetti-bolognese",
     "name": "Spaghetti Bolognese",
     "cuisine": "Italian",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 60,
     "defaultBatchSize": 4,
     "prepNotes": "Bolognese sauce improves overnight. Freezes well for 3 months. Cook pasta fresh each day.",
-    "macrosPerServing": { "calories": 540, "protein": 38, "carbs": 58, "fat": 16 },
+    "macrosPerServing": {
+      "calories": 700,
+      "protein": 38,
+      "carbs": 98,
+      "fat": 16
+    },
     "ingredients": [
-      { "name": "beef mince", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "spaghetti", "quantity": 320, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 75 },
-      { "name": "tinned chopped tomatoes", "quantity": 800, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "carrots", "quantity": 100, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "celery sticks", "quantity": 2, "unit": "stick", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "tomato puree", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "beef stock cube", "quantity": 1, "unit": "cube", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "Parmesan", "quantity": 60, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "Grana Padano" }
+      {
+        "name": "beef mince",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "spaghetti",
+        "quantity": 320,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 75
+      },
+      {
+        "name": "tinned chopped tomatoes",
+        "quantity": 800,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "carrots",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "celery sticks",
+        "quantity": 2,
+        "unit": "stick",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "tomato puree",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "beef stock cube",
+        "quantity": 1,
+        "unit": "cube",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "Parmesan",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": "Grana Padano"
+      }
     ],
     "method": [
       "Finely dice onion, carrot and celery. Fry in oil 8 min until soft.",
@@ -95,24 +332,110 @@
     "id": "chilli-con-carne",
     "name": "Chilli con Carne",
     "cuisine": "Mexican",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 50,
     "defaultBatchSize": 4,
     "prepNotes": "Freezes brilliantly. Serve with rice, jacket potato or wraps. Great the next day.",
-    "macrosPerServing": { "calories": 460, "protein": 38, "carbs": 40, "fat": 15 },
+    "macrosPerServing": {
+      "calories": 620,
+      "protein": 38,
+      "carbs": 80,
+      "fat": 15
+    },
     "ingredients": [
-      { "name": "beef mince", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "basmati rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
-      { "name": "tinned kidney beans", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "tinned black beans" },
-      { "name": "tinned chopped tomatoes", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "red pepper", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "chilli powder", "quantity": 10, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "ground cumin", "quantity": 5, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "smoked paprika", "quantity": 5, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "sweet paprika" },
-      { "name": "dark chocolate", "quantity": 20, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "beef mince",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 77
+      },
+      {
+        "name": "tinned kidney beans",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "tinned black beans"
+      },
+      {
+        "name": "tinned chopped tomatoes",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "red pepper",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "chilli powder",
+        "quantity": 10,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "ground cumin",
+        "quantity": 5,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "smoked paprika",
+        "quantity": 5,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "sweet paprika"
+      },
+      {
+        "name": "dark chocolate",
+        "quantity": 20,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Fry onion, pepper and garlic until soft.",
@@ -125,22 +448,94 @@
     "id": "teriyaki-chicken",
     "name": "Teriyaki Chicken Bowl",
     "cuisine": "Japanese",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 20,
     "defaultBatchSize": 4,
     "prepNotes": "Cook chicken and sauce fresh; rice can be batch-cooked and refrigerated 3 days.",
-    "macrosPerServing": { "calories": 490, "protein": 44, "carbs": 48, "fat": 12 },
+    "macrosPerServing": {
+      "calories": 650,
+      "protein": 44,
+      "carbs": 88,
+      "fat": 12
+    },
     "ingredients": [
-      { "name": "chicken thigh", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "chicken breast" },
-      { "name": "jasmine rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "basmati rice", "carbContent": 80 },
-      { "name": "soy sauce", "quantity": 60, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "tamari (gluten-free)" },
-      { "name": "mirin", "quantity": 45, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "1 tbsp honey + 1 tbsp rice vinegar" },
-      { "name": "honey", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 2, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "sesame oil", "quantity": 15, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "vegetable oil" },
-      { "name": "spring onions", "quantity": 4, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "sesame seeds", "quantity": 20, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chicken thigh",
+        "quantity": 700,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "chicken breast"
+      },
+      {
+        "name": "jasmine rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "basmati rice",
+        "carbContent": 80
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 60,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "tamari (gluten-free)"
+      },
+      {
+        "name": "mirin",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "1 tbsp honey + 1 tbsp rice vinegar"
+      },
+      {
+        "name": "honey",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "sesame oil",
+        "quantity": 15,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "vegetable oil"
+      },
+      {
+        "name": "spring onions",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "sesame seeds",
+        "quantity": 20,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Mix soy sauce, mirin, honey and garlic for the teriyaki sauce.",
@@ -153,23 +548,102 @@
     "id": "thai-green-curry",
     "name": "Thai Green Chicken Curry",
     "cuisine": "Thai",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 25,
     "defaultBatchSize": 4,
     "prepNotes": "Best eaten fresh; coconut milk splits if frozen. Reheat gently. Leftovers keep 3 days.",
-    "macrosPerServing": { "calories": 510, "protein": 42, "carbs": 36, "fat": 22 },
+    "macrosPerServing": {
+      "calories": 670,
+      "protein": 42,
+      "carbs": 76,
+      "fat": 22
+    },
     "ingredients": [
-      { "name": "chicken breast", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "coconut milk", "quantity": 400, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "basmati rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
-      { "name": "green curry paste", "quantity": 60, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": "2 tbsp green curry powder + 1 tsp fish sauce" },
-      { "name": "fish sauce", "quantity": 30, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "soy sauce" },
-      { "name": "courgette", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "red pepper", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "baby spinach", "quantity": 80, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh lime", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": "1 tbsp lime juice" },
-      { "name": "fresh basil", "quantity": 15, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "dried basil" }
+      {
+        "name": "chicken breast",
+        "quantity": 700,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "coconut milk",
+        "quantity": 400,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 77
+      },
+      {
+        "name": "green curry paste",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "2 tbsp green curry powder + 1 tsp fish sauce"
+      },
+      {
+        "name": "fish sauce",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "soy sauce"
+      },
+      {
+        "name": "courgette",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "red pepper",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "baby spinach",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh lime",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "1 tbsp lime juice"
+      },
+      {
+        "name": "fresh basil",
+        "quantity": 15,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "dried basil"
+      }
     ],
     "method": [
       "Fry curry paste in a wok 2 min until fragrant.",
@@ -183,23 +657,102 @@
     "id": "chicken-souvlaki",
     "name": "Chicken Souvlaki Bowl",
     "cuisine": "Mediterranean",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 15,
     "cookTime": 20,
     "defaultBatchSize": 4,
     "prepNotes": "Marinate chicken up to 24h. Tzatziki keeps 4 days in the fridge. Great for meal prep.",
-    "macrosPerServing": { "calories": 440, "protein": 46, "carbs": 28, "fat": 14 },
+    "macrosPerServing": {
+      "calories": 600,
+      "protein": 46,
+      "carbs": 68,
+      "fat": 14
+    },
     "ingredients": [
-      { "name": "chicken breast", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "Greek yoghurt", "quantity": 200, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "cucumber", "quantity": 0.5, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "cherry tomatoes", "quantity": 200, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "red onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "pitta bread", "quantity": 4, "unit": "whole", "aisle": "bakery", "isPrimaryProtein": false, "substitute": "flatbread", "carbContent": 55 },
-      { "name": "lemon", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "dried oregano", "quantity": 10, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 2, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "olive oil", "quantity": 40, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chicken breast",
+        "quantity": 700,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "Greek yoghurt",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "cucumber",
+        "quantity": 0.5,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "red onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "pitta bread",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "bakery",
+        "isPrimaryProtein": false,
+        "substitute": "flatbread",
+        "carbContent": 55
+      },
+      {
+        "name": "lemon",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "dried oregano",
+        "quantity": 10,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "olive oil",
+        "quantity": 40,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Marinate chicken in olive oil, lemon juice, garlic and oregano for 30 min.",
@@ -212,22 +765,94 @@
     "id": "bbq-pulled-pork-bowl",
     "name": "BBQ Pulled Pork Bowl",
     "cuisine": "American",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 15,
     "cookTime": 240,
     "defaultBatchSize": 6,
     "prepNotes": "Slow cook 4h. Pulled pork freezes well for 3 months. Batch cook for excellent meal prep.",
-    "macrosPerServing": { "calories": 500, "protein": 40, "carbs": 44, "fat": 17 },
+    "macrosPerServing": {
+      "calories": 660,
+      "protein": 40,
+      "carbs": 84,
+      "fat": 17
+    },
     "ingredients": [
-      { "name": "pork shoulder", "quantity": 1200, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "basmati rice", "quantity": 360, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
-      { "name": "BBQ sauce", "quantity": 200, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "smoked paprika", "quantity": 15, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "sweet paprika" },
-      { "name": "garlic powder", "quantity": 10, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion powder", "quantity": 10, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "coleslaw mix", "quantity": 400, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "mayonnaise", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "apple cider vinegar", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "white wine vinegar" }
+      {
+        "name": "pork shoulder",
+        "quantity": 1200,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "basmati rice",
+        "quantity": 360,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 77
+      },
+      {
+        "name": "BBQ sauce",
+        "quantity": 200,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "smoked paprika",
+        "quantity": 15,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "sweet paprika"
+      },
+      {
+        "name": "garlic powder",
+        "quantity": 10,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion powder",
+        "quantity": 10,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "coleslaw mix",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "mayonnaise",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "apple cider vinegar",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "white wine vinegar"
+      }
     ],
     "method": [
       "Rub pork with paprika, garlic powder, onion powder, salt and pepper.",
@@ -241,23 +866,102 @@
     "id": "beef-stir-fry",
     "name": "Beef & Broccoli Stir Fry",
     "cuisine": "Chinese",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 15,
     "cookTime": 15,
     "defaultBatchSize": 4,
     "prepNotes": "Slice beef very thin and freeze 20 min for easier cutting. Best eaten fresh but keeps 2 days.",
-    "macrosPerServing": { "calories": 450, "protein": 38, "carbs": 40, "fat": 14 },
+    "macrosPerServing": {
+      "calories": 610,
+      "protein": 38,
+      "carbs": 80,
+      "fat": 14
+    },
     "ingredients": [
-      { "name": "beef sirloin", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "beef rump steak" },
-      { "name": "jasmine rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "basmati rice", "carbContent": 80 },
-      { "name": "broccoli", "quantity": 400, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "soy sauce", "quantity": 60, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "oyster sauce", "quantity": 45, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "hoisin sauce" },
-      { "name": "sesame oil", "quantity": 15, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "vegetable oil" },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh ginger", "quantity": 20, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "0.5 tsp ground ginger" },
-      { "name": "cornflour", "quantity": 20, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "spring onions", "quantity": 3, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "beef sirloin",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "beef rump steak"
+      },
+      {
+        "name": "jasmine rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "basmati rice",
+        "carbContent": 80
+      },
+      {
+        "name": "broccoli",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 60,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "oyster sauce",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "hoisin sauce"
+      },
+      {
+        "name": "sesame oil",
+        "quantity": 15,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "vegetable oil"
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh ginger",
+        "quantity": 20,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "0.5 tsp ground ginger"
+      },
+      {
+        "name": "cornflour",
+        "quantity": 20,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "spring onions",
+        "quantity": 3,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Toss sliced beef in cornflour. Mix soy, oyster sauce and 2 tbsp water.",
@@ -271,22 +975,93 @@
     "id": "lamb-rogan-josh",
     "name": "Lamb Rogan Josh",
     "cuisine": "Indian",
-    "mealTypes": ["dinner"],
+    "mealTypes": [
+      "dinner"
+    ],
     "prepTime": 15,
     "cookTime": 90,
     "defaultBatchSize": 4,
     "prepNotes": "Better the next day. Freezes perfectly for 3 months. Serve with rice or naan.",
-    "macrosPerServing": { "calories": 530, "protein": 42, "carbs": 35, "fat": 22 },
+    "macrosPerServing": {
+      "calories": 690,
+      "protein": 42,
+      "carbs": 75,
+      "fat": 22
+    },
     "ingredients": [
-      { "name": "lamb shoulder", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "lamb leg" },
-      { "name": "basmati rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
-      { "name": "tinned chopped tomatoes", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 4, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh ginger", "quantity": 30, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "rogan josh paste", "quantity": 80, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": "2 tbsp garam masala + 1 tbsp paprika" },
-      { "name": "Greek yoghurt", "quantity": 100, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "vegetable oil", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "lamb shoulder",
+        "quantity": 700,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "lamb leg"
+      },
+      {
+        "name": "basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 77
+      },
+      {
+        "name": "tinned chopped tomatoes",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 4,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh ginger",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "rogan josh paste",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "2 tbsp garam masala + 1 tbsp paprika"
+      },
+      {
+        "name": "Greek yoghurt",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "vegetable oil",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Cube lamb and brown in batches in hot oil. Set aside.",
@@ -300,22 +1075,94 @@
     "id": "chicken-fajitas",
     "name": "Chicken Fajitas",
     "cuisine": "Mexican",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 20,
     "defaultBatchSize": 4,
     "prepNotes": "Keep cooked chicken and peppers separate from wraps. Filling keeps 3 days in the fridge.",
-    "macrosPerServing": { "calories": 470, "protein": 42, "carbs": 38, "fat": 14 },
+    "macrosPerServing": {
+      "calories": 630,
+      "protein": 42,
+      "carbs": 78,
+      "fat": 14
+    },
     "ingredients": [
-      { "name": "chicken breast", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "flour tortilla wraps", "quantity": 8, "unit": "whole", "aisle": "bakery", "isPrimaryProtein": false, "substitute": "corn tortillas", "carbContent": 52 },
-      { "name": "mixed peppers", "quantity": 3, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fajita spice mix", "quantity": 30, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "1 tsp each: cumin, paprika, chilli, garlic powder" },
-      { "name": "sour cream", "quantity": 120, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "Greek yoghurt" },
-      { "name": "cheddar cheese", "quantity": 80, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "lime", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "olive oil", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chicken breast",
+        "quantity": 700,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "flour tortilla wraps",
+        "quantity": 8,
+        "unit": "whole",
+        "aisle": "bakery",
+        "isPrimaryProtein": false,
+        "substitute": "corn tortillas",
+        "carbContent": 52
+      },
+      {
+        "name": "mixed peppers",
+        "quantity": 3,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fajita spice mix",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "1 tsp each: cumin, paprika, chilli, garlic powder"
+      },
+      {
+        "name": "sour cream",
+        "quantity": 120,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": "Greek yoghurt"
+      },
+      {
+        "name": "cheddar cheese",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "lime",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "olive oil",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Slice chicken into strips and toss with fajita seasoning and oil.",
@@ -329,21 +1176,86 @@
     "id": "salmon-lemon-herb",
     "name": "Lemon Herb Salmon with Roasted Veg",
     "cuisine": "Mediterranean",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 25,
     "defaultBatchSize": 4,
     "prepNotes": "Roast veg can be batch-cooked and stored 4 days. Season salmon fresh before cooking.",
-    "macrosPerServing": { "calories": 440, "protein": 40, "carbs": 28, "fat": 18 },
+    "macrosPerServing": {
+      "calories": 600,
+      "protein": 40,
+      "carbs": 68,
+      "fat": 18
+    },
     "ingredients": [
-      { "name": "salmon fillet", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "cod fillet" },
-      { "name": "baby potatoes", "quantity": 600, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null, "carbContent": 15 },
-      { "name": "cherry tomatoes", "quantity": 250, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "courgette", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "lemon", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh dill", "quantity": 20, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "dried dill" },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "olive oil", "quantity": 45, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "salmon fillet",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "cod fillet"
+      },
+      {
+        "name": "baby potatoes",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 15
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": 250,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "courgette",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "lemon",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh dill",
+        "quantity": 20,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "dried dill"
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "olive oil",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Halve potatoes, toss in olive oil and roast at 200°C for 15 min.",
@@ -356,23 +1268,102 @@
     "id": "beef-ramen",
     "name": "Beef Ramen",
     "cuisine": "Japanese",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 15,
     "cookTime": 25,
     "defaultBatchSize": 4,
     "prepNotes": "Broth can be made ahead and stored 5 days. Cook noodles fresh per portion.",
-    "macrosPerServing": { "calories": 480, "protein": 38, "carbs": 44, "fat": 16 },
+    "macrosPerServing": {
+      "calories": 640,
+      "protein": 38,
+      "carbs": 84,
+      "fat": 16
+    },
     "ingredients": [
-      { "name": "beef sirloin", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "beef rump steak" },
-      { "name": "ramen noodles", "quantity": 320, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": "egg noodles", "carbContent": 65 },
-      { "name": "beef stock", "quantity": 1200, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "soy sauce", "quantity": 60, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "miso paste", "quantity": 40, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": "1 tbsp soy sauce + 1 tsp sesame oil" },
-      { "name": "eggs", "quantity": 4, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "spring onions", "quantity": 4, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "baby corn", "quantity": 200, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "sweetcorn" },
-      { "name": "sesame oil", "quantity": 20, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "beef sirloin",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "beef rump steak"
+      },
+      {
+        "name": "ramen noodles",
+        "quantity": 320,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "egg noodles",
+        "carbContent": 65
+      },
+      {
+        "name": "beef stock",
+        "quantity": 1200,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 60,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "miso paste",
+        "quantity": 40,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "1 tbsp soy sauce + 1 tsp sesame oil"
+      },
+      {
+        "name": "eggs",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "spring onions",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "baby corn",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "sweetcorn"
+      },
+      {
+        "name": "sesame oil",
+        "quantity": 20,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Soft boil eggs 7 min. Cool, peel and halve.",
@@ -386,21 +1377,86 @@
     "id": "chicken-pesto-pasta",
     "name": "Chicken Pesto Pasta",
     "cuisine": "Italian",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 20,
     "defaultBatchSize": 4,
     "prepNotes": "Store pasta and sauce separately in the fridge for up to 3 days. Add a splash of pasta water when reheating.",
-    "macrosPerServing": { "calories": 530, "protein": 42, "carbs": 50, "fat": 17 },
+    "macrosPerServing": {
+      "calories": 690,
+      "protein": 42,
+      "carbs": 90,
+      "fat": 17
+    },
     "ingredients": [
-      { "name": "chicken breast", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "penne pasta", "quantity": 320, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "fusilli", "carbContent": 75 },
-      { "name": "green pesto", "quantity": 120, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "cherry tomatoes", "quantity": 200, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "baby spinach", "quantity": 80, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "Parmesan", "quantity": 60, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "Grana Padano" },
-      { "name": "olive oil", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 2, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chicken breast",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "penne pasta",
+        "quantity": 320,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "fusilli",
+        "carbContent": 75
+      },
+      {
+        "name": "green pesto",
+        "quantity": 120,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "baby spinach",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "Parmesan",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": "Grana Padano"
+      },
+      {
+        "name": "olive oil",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Cook pasta per packet. Reserve a mug of pasta water before draining.",
@@ -413,22 +1469,94 @@
     "id": "thai-basil-mince",
     "name": "Thai Basil Pork Mince",
     "cuisine": "Thai",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 15,
     "defaultBatchSize": 4,
     "prepNotes": "Quick weeknight cook. Keep in fridge 3 days. Serve with fried egg on top.",
-    "macrosPerServing": { "calories": 450, "protein": 36, "carbs": 42, "fat": 15 },
+    "macrosPerServing": {
+      "calories": 610,
+      "protein": 36,
+      "carbs": 82,
+      "fat": 15
+    },
     "ingredients": [
-      { "name": "pork mince", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "turkey mince" },
-      { "name": "jasmine rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 80 },
-      { "name": "fish sauce", "quantity": 45, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "soy sauce" },
-      { "name": "oyster sauce", "quantity": 45, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "hoisin sauce" },
-      { "name": "fresh basil", "quantity": 30, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "fresh coriander" },
-      { "name": "garlic cloves", "quantity": 4, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "red chillies", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": "1 tsp chilli flakes" },
-      { "name": "eggs", "quantity": 4, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "vegetable oil", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "pork mince",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "turkey mince"
+      },
+      {
+        "name": "jasmine rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 80
+      },
+      {
+        "name": "fish sauce",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "soy sauce"
+      },
+      {
+        "name": "oyster sauce",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "hoisin sauce"
+      },
+      {
+        "name": "fresh basil",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "fresh coriander"
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 4,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "red chillies",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "1 tsp chilli flakes"
+      },
+      {
+        "name": "eggs",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "vegetable oil",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Cook rice per packet.",
@@ -442,21 +1570,86 @@
     "id": "beef-burger-bowl",
     "name": "Smash Burger Bowl",
     "cuisine": "American",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 15,
     "defaultBatchSize": 4,
     "prepNotes": "Patties can be made and frozen raw. Cook direct from frozen adding 2 min per side.",
-    "macrosPerServing": { "calories": 520, "protein": 42, "carbs": 30, "fat": 24 },
+    "macrosPerServing": {
+      "calories": 680,
+      "protein": 42,
+      "carbs": 70,
+      "fat": 24
+    },
     "ingredients": [
-      { "name": "beef mince", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "burger buns", "quantity": 4, "unit": "whole", "aisle": "bakery", "isPrimaryProtein": false, "substitute": null, "carbContent": 50 },
-      { "name": "cheddar cheese", "quantity": 80, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "iceberg lettuce", "quantity": 0.5, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "beef tomatoes", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": "cherry tomatoes" },
-      { "name": "gherkins", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "mayonnaise", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "American mustard", "quantity": 30, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "Dijon mustard" }
+      {
+        "name": "beef mince",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "burger buns",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "bakery",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 50
+      },
+      {
+        "name": "cheddar cheese",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "iceberg lettuce",
+        "quantity": 0.5,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "beef tomatoes",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "cherry tomatoes"
+      },
+      {
+        "name": "gherkins",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "mayonnaise",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "American mustard",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "Dijon mustard"
+      }
     ],
     "method": [
       "Divide mince into 4 balls. Season.",
@@ -469,23 +1662,101 @@
     "id": "fish-pie",
     "name": "Fish Pie",
     "cuisine": "British",
-    "mealTypes": ["dinner"],
+    "mealTypes": [
+      "dinner"
+    ],
     "prepTime": 25,
     "cookTime": 40,
     "defaultBatchSize": 4,
     "prepNotes": "Assemble unbaked and freeze for up to 3 months. Add 15 min to baking from frozen.",
-    "macrosPerServing": { "calories": 460, "protein": 38, "carbs": 40, "fat": 16 },
+    "macrosPerServing": {
+      "calories": 620,
+      "protein": 38,
+      "carbs": 80,
+      "fat": 16
+    },
     "ingredients": [
-      { "name": "salmon fillet", "quantity": 300, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "cod fillet", "quantity": 300, "unit": "g", "aisle": "meat", "isPrimaryProtein": false, "substitute": "haddock fillet" },
-      { "name": "prawns", "quantity": 200, "unit": "g", "aisle": "frozen", "isPrimaryProtein": false, "substitute": null },
-      { "name": "potatoes", "quantity": 800, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null, "carbContent": 17 },
-      { "name": "whole milk", "quantity": 400, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "butter", "quantity": 60, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "plain flour", "quantity": 40, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "frozen peas", "quantity": 100, "unit": "g", "aisle": "frozen", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh dill", "quantity": 15, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "dried dill" },
-      { "name": "cheddar cheese", "quantity": 60, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "salmon fillet",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "cod fillet",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": false,
+        "substitute": "haddock fillet"
+      },
+      {
+        "name": "prawns",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "frozen",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "potatoes",
+        "quantity": 800,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 17
+      },
+      {
+        "name": "whole milk",
+        "quantity": 400,
+        "unit": "ml",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "butter",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "plain flour",
+        "quantity": 40,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "frozen peas",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "frozen",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh dill",
+        "quantity": 15,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "dried dill"
+      },
+      {
+        "name": "cheddar cheese",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Boil and mash potatoes with butter and milk. Season.",
@@ -499,23 +1770,102 @@
     "id": "keema-curry",
     "name": "Keema Curry",
     "cuisine": "Indian",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 35,
     "defaultBatchSize": 4,
     "prepNotes": "Freezes well. Serve with rice or warmed naan. Can be used in wraps for lunch.",
-    "macrosPerServing": { "calories": 460, "protein": 38, "carbs": 34, "fat": 18 },
+    "macrosPerServing": {
+      "calories": 620,
+      "protein": 38,
+      "carbs": 74,
+      "fat": 18
+    },
     "ingredients": [
-      { "name": "beef mince", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "lamb mince" },
-      { "name": "basmati rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
-      { "name": "onion", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "tinned chopped tomatoes", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "frozen peas", "quantity": 150, "unit": "g", "aisle": "frozen", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 4, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh ginger", "quantity": 25, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garam masala", "quantity": 10, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "ground cumin", "quantity": 8, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "ground coriander", "quantity": 8, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "beef mince",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "lamb mince"
+      },
+      {
+        "name": "basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 77
+      },
+      {
+        "name": "onion",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "tinned chopped tomatoes",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "frozen peas",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "frozen",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 4,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh ginger",
+        "quantity": 25,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garam masala",
+        "quantity": 10,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "ground cumin",
+        "quantity": 8,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "ground coriander",
+        "quantity": 8,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Fry onion until golden. Add garlic and ginger, cook 2 min.",
@@ -528,23 +1878,102 @@
     "id": "turkey-chilli",
     "name": "Turkey Mince Chilli",
     "cuisine": "Mexican",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 40,
     "defaultBatchSize": 4,
     "prepNotes": "Leaner than beef chilli. Freezes well. Great in wraps or over jacket potato.",
-    "macrosPerServing": { "calories": 420, "protein": 40, "carbs": 36, "fat": 10 },
+    "macrosPerServing": {
+      "calories": 580,
+      "protein": 40,
+      "carbs": 76,
+      "fat": 10
+    },
     "ingredients": [
-      { "name": "turkey mince", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "chicken mince" },
-      { "name": "basmati rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
-      { "name": "tinned kidney beans", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "tinned chopped tomatoes", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "red pepper", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "chilli powder", "quantity": 8, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "ground cumin", "quantity": 5, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "smoked paprika", "quantity": 5, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "turkey mince",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "chicken mince"
+      },
+      {
+        "name": "basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 77
+      },
+      {
+        "name": "tinned kidney beans",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "tinned chopped tomatoes",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "red pepper",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "chilli powder",
+        "quantity": 8,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "ground cumin",
+        "quantity": 5,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "smoked paprika",
+        "quantity": 5,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Fry onion, pepper and garlic until soft.",
@@ -557,22 +1986,94 @@
     "id": "greek-chicken-traybake",
     "name": "Greek Chicken Traybake",
     "cuisine": "Mediterranean",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 45,
     "defaultBatchSize": 4,
     "prepNotes": "One-tray meal. Keeps 4 days in the fridge. Reheat in oven at 180°C for 15 min.",
-    "macrosPerServing": { "calories": 430, "protein": 44, "carbs": 26, "fat": 16 },
+    "macrosPerServing": {
+      "calories": 590,
+      "protein": 44,
+      "carbs": 66,
+      "fat": 16
+    },
     "ingredients": [
-      { "name": "chicken thigh", "quantity": 800, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "chicken breast" },
-      { "name": "baby potatoes", "quantity": 600, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null, "carbContent": 15 },
-      { "name": "cherry tomatoes", "quantity": 300, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "red onion", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "kalamata olives", "quantity": 80, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": "black olives" },
-      { "name": "feta cheese", "quantity": 100, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "lemon", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "dried oregano", "quantity": 10, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "olive oil", "quantity": 45, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chicken thigh",
+        "quantity": 800,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "chicken breast"
+      },
+      {
+        "name": "baby potatoes",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 15
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "red onion",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "kalamata olives",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "black olives"
+      },
+      {
+        "name": "feta cheese",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "lemon",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "dried oregano",
+        "quantity": 10,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "olive oil",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Toss potatoes in olive oil, oregano and salt. Spread in roasting tray. Roast 200°C for 15 min.",
@@ -585,22 +2086,93 @@
     "id": "sausage-casserole",
     "name": "Sausage Casserole",
     "cuisine": "British",
-    "mealTypes": ["dinner"],
+    "mealTypes": [
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 50,
     "defaultBatchSize": 4,
     "prepNotes": "Freezes well. Serve with crusty bread or mash. Use good-quality pork sausages.",
-    "macrosPerServing": { "calories": 490, "protein": 28, "carbs": 38, "fat": 22 },
+    "macrosPerServing": {
+      "calories": 650,
+      "protein": 28,
+      "carbs": 78,
+      "fat": 22
+    },
     "ingredients": [
-      { "name": "pork sausages", "quantity": 8, "unit": "whole", "aisle": "meat", "isPrimaryProtein": true, "substitute": "chicken sausages" },
-      { "name": "tinned chopped tomatoes", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "tinned butter beans", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "tinned cannellini beans" },
-      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "smoked paprika", "quantity": 8, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh thyme", "quantity": 5, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "1 tsp dried thyme" },
-      { "name": "red wine", "quantity": 150, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "beef stock" },
-      { "name": "crusty bread", "quantity": 4, "unit": "slice", "aisle": "bakery", "isPrimaryProtein": false, "substitute": null, "carbContent": 50 }
+      {
+        "name": "pork sausages",
+        "quantity": 8,
+        "unit": "whole",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "chicken sausages"
+      },
+      {
+        "name": "tinned chopped tomatoes",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "tinned butter beans",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "tinned cannellini beans"
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "smoked paprika",
+        "quantity": 8,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh thyme",
+        "quantity": 5,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "1 tsp dried thyme"
+      },
+      {
+        "name": "red wine",
+        "quantity": 150,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "beef stock"
+      },
+      {
+        "name": "crusty bread",
+        "quantity": 4,
+        "unit": "slice",
+        "aisle": "bakery",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 50
+      }
     ],
     "method": [
       "Brown sausages in an oven-proof pan. Remove.",
@@ -614,21 +2186,86 @@
     "id": "char-siu-pork-bowl",
     "name": "Char Siu Pork Bowl",
     "cuisine": "Chinese",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 30,
     "defaultBatchSize": 4,
     "prepNotes": "Marinate pork overnight for best colour and flavour. Keeps 4 days sliced in the fridge.",
-    "macrosPerServing": { "calories": 500, "protein": 38, "carbs": 48, "fat": 14 },
+    "macrosPerServing": {
+      "calories": 660,
+      "protein": 38,
+      "carbs": 88,
+      "fat": 14
+    },
     "ingredients": [
-      { "name": "pork tenderloin", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "pork shoulder steaks" },
-      { "name": "jasmine rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 80 },
-      { "name": "hoisin sauce", "quantity": 60, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "honey", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "soy sauce", "quantity": 45, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "Chinese five spice", "quantity": 5, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": "mixed spice" },
-      { "name": "pak choi", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": "bok choy or spring greens" },
-      { "name": "sesame seeds", "quantity": 15, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "pork tenderloin",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "pork shoulder steaks"
+      },
+      {
+        "name": "jasmine rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 80
+      },
+      {
+        "name": "hoisin sauce",
+        "quantity": 60,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "honey",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "Chinese five spice",
+        "quantity": 5,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "mixed spice"
+      },
+      {
+        "name": "pak choi",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "bok choy or spring greens"
+      },
+      {
+        "name": "sesame seeds",
+        "quantity": 15,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Mix hoisin, honey, soy and five spice. Coat pork and marinate 1h (or overnight).",
@@ -641,25 +2278,117 @@
     "id": "moussaka",
     "name": "Lamb Moussaka",
     "cuisine": "Mediterranean",
-    "mealTypes": ["dinner"],
+    "mealTypes": [
+      "dinner"
+    ],
     "prepTime": 30,
     "cookTime": 60,
     "defaultBatchSize": 6,
     "prepNotes": "Make ahead: assemble and refrigerate up to 2 days before baking. Freezes well.",
-    "macrosPerServing": { "calories": 490, "protein": 36, "carbs": 30, "fat": 24 },
+    "macrosPerServing": {
+      "calories": 650,
+      "protein": 36,
+      "carbs": 70,
+      "fat": 24
+    },
     "ingredients": [
-      { "name": "lamb mince", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "beef mince" },
-      { "name": "aubergine", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "potatoes", "quantity": 400, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null, "carbContent": 17 },
-      { "name": "tinned chopped tomatoes", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "ground cinnamon", "quantity": 5, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "whole milk", "quantity": 400, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "butter", "quantity": 40, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "plain flour", "quantity": 40, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "eggs", "quantity": 2, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "Parmesan", "quantity": 50, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "lamb mince",
+        "quantity": 700,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "beef mince"
+      },
+      {
+        "name": "aubergine",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "potatoes",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 17
+      },
+      {
+        "name": "tinned chopped tomatoes",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "ground cinnamon",
+        "quantity": 5,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "whole milk",
+        "quantity": 400,
+        "unit": "ml",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "butter",
+        "quantity": 40,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "plain flour",
+        "quantity": 40,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "eggs",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "Parmesan",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Slice aubergine and potatoes. Brush with oil and roast at 200°C for 20 min.",
@@ -673,23 +2402,102 @@
     "id": "pad-thai-chicken",
     "name": "Pad Thai with Chicken",
     "cuisine": "Thai",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 15,
     "cookTime": 15,
     "defaultBatchSize": 4,
     "prepNotes": "Soak noodles in cold water rather than boiling for better texture. Best eaten fresh.",
-    "macrosPerServing": { "calories": 480, "protein": 38, "carbs": 50, "fat": 14 },
+    "macrosPerServing": {
+      "calories": 640,
+      "protein": 38,
+      "carbs": 90,
+      "fat": 14
+    },
     "ingredients": [
-      { "name": "chicken breast", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "rice noodles", "quantity": 300, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": null, "carbContent": 75 },
-      { "name": "eggs", "quantity": 3, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fish sauce", "quantity": 45, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "soy sauce" },
-      { "name": "tamarind paste", "quantity": 30, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": "2 tbsp lime juice + 1 tbsp Worcestershire sauce" },
-      { "name": "spring onions", "quantity": 4, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "beansprouts", "quantity": 150, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "shredded cabbage" },
-      { "name": "unsalted peanuts", "quantity": 80, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "cashew nuts" },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "lime", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chicken breast",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "rice noodles",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 75
+      },
+      {
+        "name": "eggs",
+        "quantity": 3,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fish sauce",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "soy sauce"
+      },
+      {
+        "name": "tamarind paste",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "2 tbsp lime juice + 1 tbsp Worcestershire sauce"
+      },
+      {
+        "name": "spring onions",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "beansprouts",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "shredded cabbage"
+      },
+      {
+        "name": "unsalted peanuts",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "cashew nuts"
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "lime",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Soak rice noodles in cold water 30 min, drain.",
@@ -703,20 +2511,78 @@
     "id": "chicken-carbonara",
     "name": "Chicken Carbonara",
     "cuisine": "Italian",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 20,
     "defaultBatchSize": 4,
     "prepNotes": "Make the egg sauce off the heat to avoid scrambling. Best eaten fresh.",
-    "macrosPerServing": { "calories": 560, "protein": 46, "carbs": 48, "fat": 20 },
+    "macrosPerServing": {
+      "calories": 720,
+      "protein": 46,
+      "carbs": 88,
+      "fat": 20
+    },
     "ingredients": [
-      { "name": "chicken breast", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "spaghetti", "quantity": 320, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 75 },
-      { "name": "bacon lardons", "quantity": 200, "unit": "g", "aisle": "meat", "isPrimaryProtein": false, "substitute": "pancetta" },
-      { "name": "eggs", "quantity": 4, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "Parmesan", "quantity": 80, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "Pecorino Romano" },
-      { "name": "garlic cloves", "quantity": 2, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "black pepper", "quantity": 5, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chicken breast",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "spaghetti",
+        "quantity": 320,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 75
+      },
+      {
+        "name": "bacon lardons",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": false,
+        "substitute": "pancetta"
+      },
+      {
+        "name": "eggs",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "Parmesan",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": "Pecorino Romano"
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "black pepper",
+        "quantity": 5,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Cook spaghetti per packet. Reserve a large mug of pasta water.",
@@ -730,22 +2596,94 @@
     "id": "beef-tacos",
     "name": "Beef Tacos",
     "cuisine": "Mexican",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 20,
     "defaultBatchSize": 4,
     "prepNotes": "Cook mince ahead and keep in the fridge 4 days. Assemble tacos fresh each time.",
-    "macrosPerServing": { "calories": 480, "protein": 36, "carbs": 42, "fat": 17 },
+    "macrosPerServing": {
+      "calories": 640,
+      "protein": 36,
+      "carbs": 82,
+      "fat": 17
+    },
     "ingredients": [
-      { "name": "beef mince", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "corn tortillas", "quantity": 12, "unit": "whole", "aisle": "bakery", "isPrimaryProtein": false, "substitute": "flour tortillas", "carbContent": 50 },
-      { "name": "red onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "cherry tomatoes", "quantity": 200, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "avocado", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "sour cream", "quantity": 100, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "Greek yoghurt" },
-      { "name": "cheddar cheese", "quantity": 80, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "taco seasoning", "quantity": 30, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "1 tsp each: cumin, chilli powder, garlic powder, paprika" },
-      { "name": "lime", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "beef mince",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "corn tortillas",
+        "quantity": 12,
+        "unit": "whole",
+        "aisle": "bakery",
+        "isPrimaryProtein": false,
+        "substitute": "flour tortillas",
+        "carbContent": 50
+      },
+      {
+        "name": "red onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "avocado",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "sour cream",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": "Greek yoghurt"
+      },
+      {
+        "name": "cheddar cheese",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "taco seasoning",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "1 tsp each: cumin, chilli powder, garlic powder, paprika"
+      },
+      {
+        "name": "lime",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Brown beef mince. Add taco seasoning and 100ml water. Simmer 5 min.",
@@ -758,23 +2696,102 @@
     "id": "burrito-bowl",
     "name": "Chicken Burrito Bowl",
     "cuisine": "Mexican",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 15,
     "cookTime": 25,
     "defaultBatchSize": 4,
     "prepNotes": "Store components separately and assemble fresh. All components keep 4 days.",
-    "macrosPerServing": { "calories": 490, "protein": 44, "carbs": 46, "fat": 12 },
+    "macrosPerServing": {
+      "calories": 650,
+      "protein": 44,
+      "carbs": 86,
+      "fat": 12
+    },
     "ingredients": [
-      { "name": "chicken breast", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "basmati rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
-      { "name": "tinned black beans", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "tinned kidney beans" },
-      { "name": "mixed peppers", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "iceberg lettuce", "quantity": 0.5, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "cheddar cheese", "quantity": 80, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "sour cream", "quantity": 100, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "Greek yoghurt" },
-      { "name": "fajita spice mix", "quantity": 30, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "lime", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh coriander", "quantity": 15, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "dried coriander" }
+      {
+        "name": "chicken breast",
+        "quantity": 700,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 77
+      },
+      {
+        "name": "tinned black beans",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "tinned kidney beans"
+      },
+      {
+        "name": "mixed peppers",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "iceberg lettuce",
+        "quantity": 0.5,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "cheddar cheese",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "sour cream",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": "Greek yoghurt"
+      },
+      {
+        "name": "fajita spice mix",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "lime",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh coriander",
+        "quantity": 15,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "dried coriander"
+      }
     ],
     "method": [
       "Season chicken with fajita spice and grill or fry until cooked through. Slice.",
@@ -788,23 +2805,102 @@
     "id": "kedgeree",
     "name": "Smoked Haddock Kedgeree",
     "cuisine": "British",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 30,
     "defaultBatchSize": 4,
     "prepNotes": "Keep rice and fish separate if storing. Reheat gently with a splash of water. Keeps 2 days.",
-    "macrosPerServing": { "calories": 440, "protein": 36, "carbs": 44, "fat": 12 },
+    "macrosPerServing": {
+      "calories": 600,
+      "protein": 36,
+      "carbs": 84,
+      "fat": 12
+    },
     "ingredients": [
-      { "name": "smoked haddock", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "smoked cod" },
-      { "name": "basmati rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
-      { "name": "eggs", "quantity": 4, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "frozen peas", "quantity": 150, "unit": "g", "aisle": "frozen", "isPrimaryProtein": false, "substitute": null },
-      { "name": "medium curry powder", "quantity": 15, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "butter", "quantity": 30, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "whole milk", "quantity": 300, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh parsley", "quantity": 15, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "dried parsley" },
-      { "name": "lemon", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "smoked haddock",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "smoked cod"
+      },
+      {
+        "name": "basmati rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 77
+      },
+      {
+        "name": "eggs",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "frozen peas",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "frozen",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "medium curry powder",
+        "quantity": 15,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "butter",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "whole milk",
+        "quantity": 300,
+        "unit": "ml",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh parsley",
+        "quantity": 15,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "dried parsley"
+      },
+      {
+        "name": "lemon",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Poach haddock in milk 8-10 min. Flake, discard skin.",
@@ -818,20 +2914,77 @@
     "id": "beef-lamb-chops",
     "name": "Lamb Chops with Mint Sauce and Greens",
     "cuisine": "British",
-    "mealTypes": ["dinner"],
+    "mealTypes": [
+      "dinner"
+    ],
     "prepTime": 5,
     "cookTime": 20,
     "defaultBatchSize": 2,
     "prepNotes": "Best cooked fresh. Marinate up to 2h for extra flavour. Pair with whatever greens you have.",
-    "macrosPerServing": { "calories": 460, "protein": 40, "carbs": 18, "fat": 26 },
+    "macrosPerServing": {
+      "calories": 620,
+      "protein": 40,
+      "carbs": 58,
+      "fat": 26
+    },
     "ingredients": [
-      { "name": "lamb chops", "quantity": 4, "unit": "whole", "aisle": "meat", "isPrimaryProtein": true, "substitute": "lamb steaks" },
-      { "name": "baby potatoes", "quantity": 500, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null, "carbContent": 15 },
-      { "name": "tenderstem broccoli", "quantity": 200, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "long-stem broccoli or green beans" },
-      { "name": "fresh mint", "quantity": 20, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "mint sauce (jarred)" },
-      { "name": "white wine vinegar", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "malt vinegar" },
-      { "name": "garlic cloves", "quantity": 2, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "olive oil", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "lamb chops",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "lamb steaks"
+      },
+      {
+        "name": "baby potatoes",
+        "quantity": 500,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 15
+      },
+      {
+        "name": "tenderstem broccoli",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "long-stem broccoli or green beans"
+      },
+      {
+        "name": "fresh mint",
+        "quantity": 20,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "mint sauce (jarred)"
+      },
+      {
+        "name": "white wine vinegar",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "malt vinegar"
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "olive oil",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Boil baby potatoes until tender.",
@@ -845,22 +2998,93 @@
     "id": "chicken-risotto",
     "name": "Chicken & Mushroom Risotto",
     "cuisine": "Italian",
-    "mealTypes": ["dinner"],
+    "mealTypes": [
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 40,
     "defaultBatchSize": 4,
     "prepNotes": "Risotto does not freeze well. Store in fridge 2 days and reheat with a splash of stock.",
-    "macrosPerServing": { "calories": 510, "protein": 38, "carbs": 52, "fat": 14 },
+    "macrosPerServing": {
+      "calories": 670,
+      "protein": 38,
+      "carbs": 92,
+      "fat": 14
+    },
     "ingredients": [
-      { "name": "chicken breast", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "arborio rice", "quantity": 320, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 80 },
-      { "name": "chestnut mushrooms", "quantity": 300, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "button mushrooms" },
-      { "name": "chicken stock", "quantity": 1200, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 2, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "Parmesan", "quantity": 60, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "butter", "quantity": 30, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "dry white wine", "quantity": 150, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "extra chicken stock" }
+      {
+        "name": "chicken breast",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "arborio rice",
+        "quantity": 320,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 80
+      },
+      {
+        "name": "chestnut mushrooms",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "button mushrooms"
+      },
+      {
+        "name": "chicken stock",
+        "quantity": 1200,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "Parmesan",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "butter",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "dry white wine",
+        "quantity": 150,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "extra chicken stock"
+      }
     ],
     "method": [
       "Fry chicken until golden. Slice and set aside.",
@@ -874,22 +3098,94 @@
     "id": "gyudon",
     "name": "Gyudon (Japanese Beef Bowl)",
     "cuisine": "Japanese",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 20,
     "defaultBatchSize": 4,
     "prepNotes": "The beef topping keeps 4 days in the fridge. Cook rice fresh per portion.",
-    "macrosPerServing": { "calories": 460, "protein": 36, "carbs": 46, "fat": 14 },
+    "macrosPerServing": {
+      "calories": 620,
+      "protein": 36,
+      "carbs": 86,
+      "fat": 14
+    },
     "ingredients": [
-      { "name": "beef sirloin", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "beef rump steak" },
-      { "name": "jasmine rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "basmati rice", "carbContent": 80 },
-      { "name": "onion", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "soy sauce", "quantity": 60, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "mirin", "quantity": 45, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "dashi stock", "quantity": 300, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "beef stock" },
-      { "name": "eggs", "quantity": 4, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "spring onions", "quantity": 3, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "pickled ginger", "quantity": 40, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "beef sirloin",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "beef rump steak"
+      },
+      {
+        "name": "jasmine rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "basmati rice",
+        "carbContent": 80
+      },
+      {
+        "name": "onion",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 60,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "mirin",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "dashi stock",
+        "quantity": 300,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "beef stock"
+      },
+      {
+        "name": "eggs",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "spring onions",
+        "quantity": 3,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "pickled ginger",
+        "quantity": 40,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Thinly slice beef (partially freeze for easier slicing).",
@@ -903,22 +3199,94 @@
     "id": "stuffed-peppers",
     "name": "Turkey Stuffed Peppers",
     "cuisine": "Mediterranean",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 15,
     "cookTime": 45,
     "defaultBatchSize": 4,
     "prepNotes": "Can be assembled ahead and refrigerated unbaked for up to 24h. Freezes well.",
-    "macrosPerServing": { "calories": 420, "protein": 38, "carbs": 32, "fat": 14 },
+    "macrosPerServing": {
+      "calories": 580,
+      "protein": 38,
+      "carbs": 72,
+      "fat": 14
+    },
     "ingredients": [
-      { "name": "turkey mince", "quantity": 600, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "beef mince" },
-      { "name": "bell peppers", "quantity": 4, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "basmati rice", "quantity": 200, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
-      { "name": "tinned chopped tomatoes", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "mozzarella", "quantity": 100, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "cheddar cheese" },
-      { "name": "dried oregano", "quantity": 8, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "smoked paprika", "quantity": 5, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "turkey mince",
+        "quantity": 600,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "beef mince"
+      },
+      {
+        "name": "bell peppers",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "basmati rice",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 77
+      },
+      {
+        "name": "tinned chopped tomatoes",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "onion",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "mozzarella",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": "cheddar cheese"
+      },
+      {
+        "name": "dried oregano",
+        "quantity": 8,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "smoked paprika",
+        "quantity": 5,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Par-cook rice 10 min. Drain.",
@@ -932,22 +3300,93 @@
     "id": "baked-cod",
     "name": "Baked Cod with Chorizo & Chickpeas",
     "cuisine": "Italian",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 25,
     "defaultBatchSize": 4,
     "prepNotes": "Cook fish fresh — it does not keep well. The chickpea base can be made 2 days ahead.",
-    "macrosPerServing": { "calories": 420, "protein": 40, "carbs": 28, "fat": 15 },
+    "macrosPerServing": {
+      "calories": 580,
+      "protein": 40,
+      "carbs": 68,
+      "fat": 15
+    },
     "ingredients": [
-      { "name": "cod fillet", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "haddock fillet" },
-      { "name": "tinned chickpeas", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "tinned butter beans" },
-      { "name": "chorizo", "quantity": 120, "unit": "g", "aisle": "meat", "isPrimaryProtein": false, "substitute": "smoked bacon" },
-      { "name": "cherry tomatoes", "quantity": 300, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "baby spinach", "quantity": 80, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "smoked paprika", "quantity": 8, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "olive oil", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "lemon", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "cod fillet",
+        "quantity": 700,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "haddock fillet"
+      },
+      {
+        "name": "tinned chickpeas",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "tinned butter beans"
+      },
+      {
+        "name": "chorizo",
+        "quantity": 120,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": false,
+        "substitute": "smoked bacon"
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "baby spinach",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 3,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "smoked paprika",
+        "quantity": 8,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "olive oil",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "lemon",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Fry chorizo until crispy. Add garlic and paprika.",
@@ -960,23 +3399,100 @@
     "id": "thai-beef-salad",
     "name": "Thai Beef Salad",
     "cuisine": "Thai",
-    "mealTypes": ["lunch"],
+    "mealTypes": [
+      "lunch"
+    ],
     "prepTime": 15,
     "cookTime": 10,
     "defaultBatchSize": 2,
     "prepNotes": "Dress salad just before serving. Beef can be marinated and refrigerated for up to 24h.",
-    "macrosPerServing": { "calories": 380, "protein": 36, "carbs": 18, "fat": 18 },
+    "macrosPerServing": {
+      "calories": 540,
+      "protein": 36,
+      "carbs": 58,
+      "fat": 18
+    },
     "ingredients": [
-      { "name": "beef sirloin", "quantity": 400, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "beef rump steak" },
-      { "name": "mixed salad leaves", "quantity": 150, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "cherry tomatoes", "quantity": 200, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "cucumber", "quantity": 0.5, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "red onion", "quantity": 0.5, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fish sauce", "quantity": 30, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "soy sauce" },
-      { "name": "lime", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh coriander", "quantity": 15, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "fresh mint", "quantity": 10, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "red chillies", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": "pinch of chilli flakes" }
+      {
+        "name": "beef sirloin",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "beef rump steak"
+      },
+      {
+        "name": "mixed salad leaves",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "cucumber",
+        "quantity": 0.5,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "red onion",
+        "quantity": 0.5,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fish sauce",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "soy sauce"
+      },
+      {
+        "name": "lime",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh coriander",
+        "quantity": 15,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "fresh mint",
+        "quantity": 10,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "red chillies",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "pinch of chilli flakes"
+      }
     ],
     "method": [
       "Sear beef in very hot pan 2-3 min per side. Rest 5 min. Slice thin.",
@@ -989,20 +3505,76 @@
     "id": "scotch-egg-bowl",
     "name": "Scotch Egg Protein Bowl",
     "cuisine": "British",
-    "mealTypes": ["lunch"],
+    "mealTypes": [
+      "lunch"
+    ],
     "prepTime": 20,
     "cookTime": 25,
     "defaultBatchSize": 4,
     "prepNotes": "Scotch eggs keep 4 days in the fridge. Great for on-the-go lunches. Assemble bowl fresh.",
-    "macrosPerServing": { "calories": 450, "protein": 38, "carbs": 20, "fat": 26 },
+    "macrosPerServing": {
+      "calories": 610,
+      "protein": 38,
+      "carbs": 60,
+      "fat": 26
+    },
     "ingredients": [
-      { "name": "pork sausages", "quantity": 8, "unit": "whole", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "eggs", "quantity": 8, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "panko breadcrumbs", "quantity": 100, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "dried breadcrumbs" },
-      { "name": "mixed salad leaves", "quantity": 150, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "cherry tomatoes", "quantity": 200, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "English mustard", "quantity": 20, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "Dijon mustard" },
-      { "name": "plain flour", "quantity": 50, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "pork sausages",
+        "quantity": 8,
+        "unit": "whole",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "eggs",
+        "quantity": 8,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "panko breadcrumbs",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "dried breadcrumbs"
+      },
+      {
+        "name": "mixed salad leaves",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "cherry tomatoes",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "English mustard",
+        "quantity": 20,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "Dijon mustard"
+      },
+      {
+        "name": "plain flour",
+        "quantity": 50,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Soft boil 4 eggs 6 min. Cool in ice water, peel.",
@@ -1016,22 +3588,93 @@
     "id": "chicken-wings",
     "name": "Sticky Chicken Wings with Slaw",
     "cuisine": "American",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 50,
     "defaultBatchSize": 4,
     "prepNotes": "Wings can be marinated overnight. Cook fresh — they lose crispness when reheated.",
-    "macrosPerServing": { "calories": 480, "protein": 40, "carbs": 24, "fat": 22 },
+    "macrosPerServing": {
+      "calories": 640,
+      "protein": 40,
+      "carbs": 64,
+      "fat": 22
+    },
     "ingredients": [
-      { "name": "chicken wings", "quantity": 1200, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "chicken drumsticks" },
-      { "name": "BBQ sauce", "quantity": 120, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "honey", "quantity": 45, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "soy sauce", "quantity": 30, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic powder", "quantity": 8, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "smoked paprika", "quantity": 8, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "coleslaw mix", "quantity": 400, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "mayonnaise", "quantity": 80, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "apple cider vinegar", "quantity": 20, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chicken wings",
+        "quantity": 1200,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": "chicken drumsticks"
+      },
+      {
+        "name": "BBQ sauce",
+        "quantity": 120,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "honey",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic powder",
+        "quantity": 8,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "smoked paprika",
+        "quantity": 8,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "coleslaw mix",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "mayonnaise",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "apple cider vinegar",
+        "quantity": 20,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Toss wings in garlic powder, paprika, salt. Bake at 220°C for 40 min, turning halfway.",
@@ -1044,22 +3687,94 @@
     "id": "lemon-chicken-chinese",
     "name": "Chinese Lemon Chicken",
     "cuisine": "Chinese",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 15,
     "cookTime": 20,
     "defaultBatchSize": 4,
     "prepNotes": "Sauce keeps 3 days. Fry chicken fresh per portion for best texture.",
-    "macrosPerServing": { "calories": 470, "protein": 40, "carbs": 46, "fat": 12 },
+    "macrosPerServing": {
+      "calories": 630,
+      "protein": 40,
+      "carbs": 86,
+      "fat": 12
+    },
     "ingredients": [
-      { "name": "chicken breast", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "jasmine rice", "quantity": 300, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 80 },
-      { "name": "lemon", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "cornflour", "quantity": 40, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "garlic cloves", "quantity": 2, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "honey", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "soy sauce", "quantity": 30, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "spring onions", "quantity": 3, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "vegetable oil", "quantity": 60, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chicken breast",
+        "quantity": 700,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "jasmine rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null,
+        "carbContent": 80
+      },
+      {
+        "name": "lemon",
+        "quantity": 2,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "cornflour",
+        "quantity": 40,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "garlic cloves",
+        "quantity": 2,
+        "unit": "clove",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "honey",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "spring onions",
+        "quantity": 3,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "vegetable oil",
+        "quantity": 60,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Cut chicken into chunks, coat in cornflour, salt and pepper.",
@@ -1072,21 +3787,86 @@
     "id": "salmon-don",
     "name": "Salmon Don",
     "cuisine": "Japanese",
-    "mealTypes": ["lunch", "dinner"],
+    "mealTypes": [
+      "lunch",
+      "dinner"
+    ],
     "prepTime": 10,
     "cookTime": 20,
     "defaultBatchSize": 2,
     "prepNotes": "Salmon is best cooked fresh. Sushi rice can be made ahead and kept covered at room temperature up to 4h.",
-    "macrosPerServing": { "calories": 460, "protein": 36, "carbs": 46, "fat": 16 },
+    "macrosPerServing": {
+      "calories": 620,
+      "protein": 36,
+      "carbs": 86,
+      "fat": 16
+    },
     "ingredients": [
-      { "name": "salmon fillet", "quantity": 400, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
-      { "name": "sushi rice", "quantity": 300, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": "jasmine rice", "carbContent": 80 },
-      { "name": "rice vinegar", "quantity": 30, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "white wine vinegar" },
-      { "name": "soy sauce", "quantity": 45, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
-      { "name": "avocado", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "cucumber", "quantity": 0.5, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "sesame seeds", "quantity": 15, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "pickled ginger", "quantity": 30, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "salmon fillet",
+        "quantity": 400,
+        "unit": "g",
+        "aisle": "meat",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "sushi rice",
+        "quantity": 300,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "jasmine rice",
+        "carbContent": 80
+      },
+      {
+        "name": "rice vinegar",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": "white wine vinegar"
+      },
+      {
+        "name": "soy sauce",
+        "quantity": 45,
+        "unit": "ml",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "avocado",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "cucumber",
+        "quantity": 0.5,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "sesame seeds",
+        "quantity": 15,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "pickled ginger",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "international",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Cook sushi rice per packet. Season with rice vinegar, sugar and salt.",
@@ -1100,20 +3880,76 @@
     "id": "protein-brownie",
     "name": "Protein Chocolate Brownies",
     "cuisine": "British",
-    "mealTypes": ["treat"],
+    "mealTypes": [
+      "treat"
+    ],
     "prepTime": 10,
     "cookTime": 25,
     "defaultBatchSize": 8,
     "prepNotes": "Store in an airtight container for up to 5 days. Freeze individual squares up to 3 months.",
-    "macrosPerServing": { "calories": 190, "protein": 14, "carbs": 18, "fat": 7 },
+    "macrosPerServing": {
+      "calories": 190,
+      "protein": 14,
+      "carbs": 18,
+      "fat": 7
+    },
     "ingredients": [
-      { "name": "chocolate protein powder", "quantity": 120, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": true, "substitute": "extra cocoa powder + whey protein" },
-      { "name": "cocoa powder", "quantity": 40, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "eggs", "quantity": 3, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "almond butter", "quantity": 120, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "peanut butter" },
-      { "name": "honey", "quantity": 80, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "maple syrup" },
-      { "name": "dark chocolate chips", "quantity": 80, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "baking powder", "quantity": 5, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "chocolate protein powder",
+        "quantity": 120,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": true,
+        "substitute": "extra cocoa powder + whey protein"
+      },
+      {
+        "name": "cocoa powder",
+        "quantity": 40,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "eggs",
+        "quantity": 3,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "almond butter",
+        "quantity": 120,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "peanut butter"
+      },
+      {
+        "name": "honey",
+        "quantity": 80,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "maple syrup"
+      },
+      {
+        "name": "dark chocolate chips",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "baking powder",
+        "quantity": 5,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Preheat oven to 180°C. Line a 20cm square tin.",
@@ -1127,17 +3963,52 @@
     "id": "greek-yoghurt-parfait",
     "name": "Greek Yoghurt Berry Parfait",
     "cuisine": "Mediterranean",
-    "mealTypes": ["treat"],
+    "mealTypes": [
+      "treat"
+    ],
     "prepTime": 5,
     "cookTime": 0,
     "defaultBatchSize": 1,
     "prepNotes": "Assemble fresh for best texture. All components keep separately for the week.",
-    "macrosPerServing": { "calories": 220, "protein": 16, "carbs": 26, "fat": 5 },
+    "macrosPerServing": {
+      "calories": 220,
+      "protein": 16,
+      "carbs": 26,
+      "fat": 5
+    },
     "ingredients": [
-      { "name": "Greek yoghurt", "quantity": 200, "unit": "g", "aisle": "dairy", "isPrimaryProtein": true, "substitute": null },
-      { "name": "mixed frozen berries", "quantity": 150, "unit": "g", "aisle": "frozen", "isPrimaryProtein": false, "substitute": "fresh berries" },
-      { "name": "granola", "quantity": 40, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "oats toasted with honey" },
-      { "name": "honey", "quantity": 15, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "maple syrup" }
+      {
+        "name": "Greek yoghurt",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "mixed frozen berries",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "frozen",
+        "isPrimaryProtein": false,
+        "substitute": "fresh berries"
+      },
+      {
+        "name": "granola",
+        "quantity": 40,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "oats toasted with honey"
+      },
+      {
+        "name": "honey",
+        "quantity": 15,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "maple syrup"
+      }
     ],
     "method": [
       "Defrost berries or use fresh.",
@@ -1149,17 +4020,52 @@
     "id": "dark-chocolate-mousse",
     "name": "Dark Chocolate Mousse",
     "cuisine": "British",
-    "mealTypes": ["treat"],
+    "mealTypes": [
+      "treat"
+    ],
     "prepTime": 15,
     "cookTime": 0,
     "defaultBatchSize": 4,
     "prepNotes": "Make the day before — improves overnight in the fridge. Keeps 3 days.",
-    "macrosPerServing": { "calories": 210, "protein": 8, "carbs": 16, "fat": 14 },
+    "macrosPerServing": {
+      "calories": 210,
+      "protein": 8,
+      "carbs": 16,
+      "fat": 14
+    },
     "ingredients": [
-      { "name": "dark chocolate", "quantity": 150, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "eggs", "quantity": 4, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "Greek yoghurt", "quantity": 100, "unit": "g", "aisle": "dairy", "isPrimaryProtein": true, "substitute": null },
-      { "name": "honey", "quantity": 20, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "dark chocolate",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "eggs",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "Greek yoghurt",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "honey",
+        "quantity": 20,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Melt chocolate gently over a bain-marie. Cool slightly.",
@@ -1172,16 +4078,44 @@
     "id": "banana-nice-cream",
     "name": "Banana Nice Cream",
     "cuisine": "American",
-    "mealTypes": ["treat"],
+    "mealTypes": [
+      "treat"
+    ],
     "prepTime": 5,
     "cookTime": 0,
     "defaultBatchSize": 2,
     "prepNotes": "Freeze bananas overnight. Blend direct from frozen. Can be refrozen for up to 2 weeks.",
-    "macrosPerServing": { "calories": 180, "protein": 10, "carbs": 30, "fat": 4 },
+    "macrosPerServing": {
+      "calories": 180,
+      "protein": 10,
+      "carbs": 30,
+      "fat": 4
+    },
     "ingredients": [
-      { "name": "ripe bananas", "quantity": 4, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
-      { "name": "vanilla protein powder", "quantity": 30, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": true, "substitute": "1 tsp vanilla extract + 1 tbsp honey" },
-      { "name": "peanut butter", "quantity": 30, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "almond butter" }
+      {
+        "name": "ripe bananas",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "vanilla protein powder",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": true,
+        "substitute": "1 tsp vanilla extract + 1 tbsp honey"
+      },
+      {
+        "name": "peanut butter",
+        "quantity": 30,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "almond butter"
+      }
     ],
     "method": [
       "Peel and slice bananas. Freeze overnight.",
@@ -1193,19 +4127,68 @@
     "id": "oat-honey-cookies",
     "name": "Oat & Honey Protein Cookies",
     "cuisine": "British",
-    "mealTypes": ["treat"],
+    "mealTypes": [
+      "treat"
+    ],
     "prepTime": 10,
     "cookTime": 15,
     "defaultBatchSize": 12,
     "prepNotes": "Store in an airtight container for up to 1 week. Freeze up to 3 months.",
-    "macrosPerServing": { "calories": 150, "protein": 8, "carbs": 16, "fat": 6 },
+    "macrosPerServing": {
+      "calories": 150,
+      "protein": 8,
+      "carbs": 16,
+      "fat": 6
+    },
     "ingredients": [
-      { "name": "rolled oats", "quantity": 200, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "vanilla protein powder", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": true, "substitute": null },
-      { "name": "honey", "quantity": 80, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "maple syrup" },
-      { "name": "peanut butter", "quantity": 100, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "almond butter" },
-      { "name": "eggs", "quantity": 1, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
-      { "name": "dark chocolate chips", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "rolled oats",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "vanilla protein powder",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "honey",
+        "quantity": 80,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "maple syrup"
+      },
+      {
+        "name": "peanut butter",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "almond butter"
+      },
+      {
+        "name": "eggs",
+        "quantity": 1,
+        "unit": "whole",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "dark chocolate chips",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Preheat oven to 170°C. Line a baking tray.",
@@ -1218,18 +4201,60 @@
     "id": "chia-pudding",
     "name": "Vanilla Chia Pudding",
     "cuisine": "American",
-    "mealTypes": ["treat"],
+    "mealTypes": [
+      "treat"
+    ],
     "prepTime": 5,
     "cookTime": 0,
     "defaultBatchSize": 4,
     "prepNotes": "Make 4 portions at once, they keep in the fridge 5 days. Stir before serving.",
-    "macrosPerServing": { "calories": 200, "protein": 10, "carbs": 18, "fat": 9 },
+    "macrosPerServing": {
+      "calories": 200,
+      "protein": 10,
+      "carbs": 18,
+      "fat": 9
+    },
     "ingredients": [
-      { "name": "chia seeds", "quantity": 80, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "whole milk", "quantity": 600, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "oat milk" },
-      { "name": "vanilla protein powder", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": true, "substitute": "1 tsp vanilla extract + 1 tbsp honey" },
-      { "name": "honey", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "maple syrup" },
-      { "name": "mixed frozen berries", "quantity": 200, "unit": "g", "aisle": "frozen", "isPrimaryProtein": false, "substitute": "fresh berries" }
+      {
+        "name": "chia seeds",
+        "quantity": 80,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "whole milk",
+        "quantity": 600,
+        "unit": "ml",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": "oat milk"
+      },
+      {
+        "name": "vanilla protein powder",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": true,
+        "substitute": "1 tsp vanilla extract + 1 tbsp honey"
+      },
+      {
+        "name": "honey",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "maple syrup"
+      },
+      {
+        "name": "mixed frozen berries",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "frozen",
+        "isPrimaryProtein": false,
+        "substitute": "fresh berries"
+      }
     ],
     "method": [
       "Whisk milk, protein powder and honey together.",
@@ -1242,19 +4267,68 @@
     "id": "rice-pudding",
     "name": "Creamy Rice Pudding",
     "cuisine": "British",
-    "mealTypes": ["treat"],
+    "mealTypes": [
+      "treat"
+    ],
     "prepTime": 5,
     "cookTime": 40,
     "defaultBatchSize": 4,
     "prepNotes": "Keeps 4 days in the fridge. Reheat with a splash of milk. Serve warm or cold.",
-    "macrosPerServing": { "calories": 240, "protein": 8, "carbs": 38, "fat": 6 },
+    "macrosPerServing": {
+      "calories": 240,
+      "protein": 8,
+      "carbs": 38,
+      "fat": 6
+    },
     "ingredients": [
-      { "name": "pudding rice", "quantity": 150, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "arborio rice" },
-      { "name": "whole milk", "quantity": 800, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "oat milk" },
-      { "name": "Greek yoghurt", "quantity": 100, "unit": "g", "aisle": "dairy", "isPrimaryProtein": true, "substitute": null },
-      { "name": "honey", "quantity": 40, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "vanilla extract", "quantity": 5, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "ground nutmeg", "quantity": 3, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "ground cinnamon" }
+      {
+        "name": "pudding rice",
+        "quantity": 150,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "arborio rice"
+      },
+      {
+        "name": "whole milk",
+        "quantity": 800,
+        "unit": "ml",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": "oat milk"
+      },
+      {
+        "name": "Greek yoghurt",
+        "quantity": 100,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "honey",
+        "quantity": 40,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "vanilla extract",
+        "quantity": 5,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "ground nutmeg",
+        "quantity": 3,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "ground cinnamon"
+      }
     ],
     "method": [
       "Bring milk to a gentle simmer with vanilla and nutmeg.",
@@ -1267,19 +4341,68 @@
     "id": "baked-cinnamon-apple",
     "name": "Baked Cinnamon Apple with Yoghurt",
     "cuisine": "British",
-    "mealTypes": ["treat"],
+    "mealTypes": [
+      "treat"
+    ],
     "prepTime": 5,
     "cookTime": 25,
     "defaultBatchSize": 4,
     "prepNotes": "Apples can be stuffed ahead and refrigerated. Bake fresh when needed.",
-    "macrosPerServing": { "calories": 170, "protein": 8, "carbs": 22, "fat": 5 },
+    "macrosPerServing": {
+      "calories": 170,
+      "protein": 8,
+      "carbs": 22,
+      "fat": 5
+    },
     "ingredients": [
-      { "name": "cooking apples", "quantity": 4, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": "large eating apples" },
-      { "name": "Greek yoghurt", "quantity": 200, "unit": "g", "aisle": "dairy", "isPrimaryProtein": true, "substitute": null },
-      { "name": "rolled oats", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "honey", "quantity": 30, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "maple syrup" },
-      { "name": "ground cinnamon", "quantity": 8, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
-      { "name": "butter", "quantity": 20, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null }
+      {
+        "name": "cooking apples",
+        "quantity": 4,
+        "unit": "whole",
+        "aisle": "produce",
+        "isPrimaryProtein": false,
+        "substitute": "large eating apples"
+      },
+      {
+        "name": "Greek yoghurt",
+        "quantity": 200,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": true,
+        "substitute": null
+      },
+      {
+        "name": "rolled oats",
+        "quantity": 60,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "honey",
+        "quantity": 30,
+        "unit": "ml",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": "maple syrup"
+      },
+      {
+        "name": "ground cinnamon",
+        "quantity": 8,
+        "unit": "g",
+        "aisle": "cupboard",
+        "isPrimaryProtein": false,
+        "substitute": null
+      },
+      {
+        "name": "butter",
+        "quantity": 20,
+        "unit": "g",
+        "aisle": "dairy",
+        "isPrimaryProtein": false,
+        "substitute": null
+      }
     ],
     "method": [
       "Core apples without going all the way through.",

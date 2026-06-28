@@ -41,6 +41,24 @@ export default function Settings({ settings, onUpdate }) {
 
         <div className="px-4 py-3">
           <label className="block text-sm font-medium text-gray-800 mb-1">
+            Daily protein target
+          </label>
+          <div className="flex items-center gap-3">
+            <input
+              type="number"
+              min={50}
+              max={300}
+              step={5}
+              value={local.proteinTarget ?? 150}
+              onChange={e => update({ proteinTarget: Number(e.target.value) })}
+              className="w-24 border border-gray-200 rounded-lg px-2 py-1 text-sm text-center"
+            />
+            <span className="text-sm text-gray-500">g protein / day</span>
+          </div>
+        </div>
+
+        <div className="px-4 py-3">
+          <label className="block text-sm font-medium text-gray-800 mb-1">
             Default batch size
           </label>
           <div className="flex items-center gap-3">
@@ -53,17 +71,6 @@ export default function Settings({ settings, onUpdate }) {
               className="w-20 border border-gray-200 rounded-lg px-2 py-1 text-sm text-center"
             />
             <span className="text-sm text-gray-500">servings per cook</span>
-          </div>
-        </div>
-
-        <div className="px-4 py-3 flex items-center justify-between">
-          <div>
-            <p className="text-sm font-medium text-gray-800">Default view</p>
-            <p className="text-xs text-gray-500">Calendar or vertical scroll</p>
-          </div>
-          <div className="flex rounded-lg overflow-hidden border border-gray-200 text-sm">
-            <button onClick={() => update({ viewMode: 'calendar' })} className={`px-3 py-1.5 ${local.viewMode === 'calendar' ? 'bg-green-600 text-white' : 'bg-white text-gray-600'}`}>Calendar</button>
-            <button onClick={() => update({ viewMode: 'scroll' })} className={`px-3 py-1.5 ${local.viewMode === 'scroll' ? 'bg-green-600 text-white' : 'bg-white text-gray-600'}`}>Scroll</button>
           </div>
         </div>
 

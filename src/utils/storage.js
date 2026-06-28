@@ -3,13 +3,15 @@ const KEYS = {
   settings: 'mp_settings',
   ratings: 'mp_ratings',
   history: 'mp_history',
+  cupboard: 'mp_cupboard',
 }
 
 const DEFAULTS = {
-  settings: { calorieTarget: 1600, defaultBatchSize: 4, viewMode: 'calendar' },
+  settings: { calorieTarget: 1600, defaultBatchSize: 4, useImperial: false, proteinTarget: 150 },
   ratings: {},
   history: [],
   currentPlan: null,
+  cupboard: [],
 }
 
 function read(key) {
@@ -65,6 +67,42 @@ export function archiveCurrentPlan(plan, weekLabel) {
 
 export function clearCurrentPlan() {
   clear(KEYS.currentPlan)
+}
+
+export function loadCupboard() {
+  return read(KEYS.cupboard) ?? DEFAULTS.cupboard
+}
+
+export function saveCupboard(items) {
+  write(KEYS.cupboard, items)
+}
+
+export function addToCupboard(ingredients) {
+  const current = loadCupboard()
+  const updated = [...current]
+  for (const ing of ingredients) {
+    const key = ing.name.toLowerCase()
+    const existing = updated.find(i => i.name.toLowerCase() === key)
+    if (existing && existing.unit === ing.unit) {
+      existing.quantity = +(existing.quantity + ing.quantity).toFixed(2)
+    } else {
+      updated.push({ name: ing.name, quantity: ing.quantity, unit: ing.unit, addedOn: Date.now() })
+    }
+  }
+  saveCupboard(updated)
+  return updated
+}
+
+export function consumeFromCupboard(ingredients) {
+  const current = loadCupboard()
+  const updated = current.map(item => {
+    const ing = ingredients.find(i => i.name.toLowerCase() === item.name.toLowerCase() && i.unit === item.unit)
+    if (!ing) return item
+    const remaining = item.quantity - ing.quantity
+    return remaining > 0 ? { ...item, quantity: +remaining.toFixed(2) } : null
+  }).filter(Boolean)
+  saveCupboard(updated)
+  return updated
 }
 
 export { KEYS, DEFAULTS }

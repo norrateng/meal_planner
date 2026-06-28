@@ -14,7 +14,7 @@ describe('adjustProtein', () => {
   })
 
   it('keeps calories within ±5% of the original when possible after rebalancing', () => {
-    const baseCalories = 520 // from recipes.json
+    const baseCalories = 680 // from recipes.json (updated with sides)
     const { newMacros } = adjustProtein('chicken-tikka-masala', 10)
     // Calories may increase slightly due to added protein, but should be reasonable
     expect(newMacros.calories).toBeGreaterThanOrEqual(baseCalories)
@@ -47,11 +47,11 @@ describe('adjustProtein', () => {
 describe('getEffectiveMacros', () => {
   it('returns base macros when no adjustments', () => {
     const macros = getEffectiveMacros('cottage-pie', null)
-    expect(macros).toEqual({ calories: 480, protein: 35, carbs: 42, fat: 18 })
+    expect(macros).toEqual({ calories: 640, protein: 35, carbs: 82, fat: 18 })
   })
 
   it('returns adjusted macros when adjustments present', () => {
-    const adj = { newMacros: { calories: 600, protein: 55, carbs: 42, fat: 18 } }
+    const adj = { newMacros: { calories: 700, protein: 55, carbs: 82, fat: 18 } }
     expect(getEffectiveMacros('cottage-pie', adj).protein).toBe(55)
   })
 

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { buildShoppingList, AISLE_ORDER } from '../utils/shoppingList'
-import { loadCurrentPlan } from '../utils/storage'
+import { loadCurrentPlan, addToCupboard, consumeFromCupboard } from '../utils/storage'
 import { formatQuantity } from '../utils/units'
 
 const AISLE_ICONS = {
@@ -24,7 +24,7 @@ function exportAsText(grouped, useImperial) {
   return text
 }
 
-export default function ShoppingList({ settings }) {
+export default function ShoppingList({ settings, onCupboardChange }) {
   const plan = loadCurrentPlan()
   const [checked, setChecked] = useState({})
 
@@ -32,9 +32,19 @@ export default function ShoppingList({ settings }) {
 
   const grouped = buildShoppingList(plan)
   const useImperial = settings?.useImperial ?? false
+  const allItems = Object.values(grouped).flat()
+  const total = allItems.length
+  const done = Object.values(checked).filter(Boolean).length
 
-  function toggle(key) {
-    setChecked(prev => ({ ...prev, [key]: !prev[key] }))
+  function toggle(key, item) {
+    const wasChecked = !!checked[key]
+    setChecked(prev => ({ ...prev, [key]: !wasChecked }))
+    if (!wasChecked) {
+      addToCupboard([{ name: item.name, quantity: item.quantity, unit: item.unit }])
+    } else {
+      consumeFromCupboard([{ name: item.name, quantity: item.quantity, unit: item.unit }])
+    }
+    onCupboardChange?.()
   }
 
   function handleExport() {
@@ -48,9 +58,6 @@ export default function ShoppingList({ settings }) {
     URL.revokeObjectURL(url)
   }
 
-  const total = Object.values(grouped).flat().length
-  const done = Object.values(checked).filter(Boolean).length
-
   return (
     <div className="p-4 space-y-4">
       <div className="flex items-center justify-between">
@@ -58,9 +65,11 @@ export default function ShoppingList({ settings }) {
           <h2 className="font-bold text-gray-900">Shopping List</h2>
           <p className="text-xs text-gray-500">{done}/{total} items checked</p>
         </div>
-        <button onClick={handleExport} className="text-sm border border-gray-200 bg-white text-gray-700 px-3 py-1.5 rounded-lg">
-          Export
-        </button>
+        <div className="flex gap-2">
+          <button onClick={handleExport} className="text-sm border border-gray-200 bg-white text-gray-700 px-3 py-1.5 rounded-lg">
+            Export
+          </button>
+        </div>
       </div>
 
       {AISLE_ORDER.filter(a => grouped[a]).map(aisle => (
@@ -78,7 +87,7 @@ export default function ShoppingList({ settings }) {
                   <input
                     type="checkbox"
                     checked={!!checked[key]}
-                    onChange={() => toggle(key)}
+                    onChange={() => toggle(key, item)}
                     className="mt-0.5 accent-green-600"
                   />
                   <div className="flex-1 min-w-0">
@@ -99,6 +108,12 @@ export default function ShoppingList({ settings }) {
           </div>
         </section>
       ))}
+
+      {done > 0 && (
+        <p className="text-center text-xs text-green-700 pt-2">
+          {done} item{done !== 1 ? 's' : ''} added to cupboard
+        </p>
+      )}
     </div>
   )
 }

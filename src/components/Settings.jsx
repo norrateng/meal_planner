@@ -49,7 +49,7 @@ export default function Settings({ settings, onUpdate }) {
               min={50}
               max={300}
               step={5}
-              value={local.proteinTarget ?? 150}
+              value={local.proteinTarget ?? 120}
               onChange={e => update({ proteinTarget: Number(e.target.value) })}
               className="w-24 border border-gray-200 rounded-lg px-2 py-1 text-sm text-center"
             />

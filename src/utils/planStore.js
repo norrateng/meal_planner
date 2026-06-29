@@ -104,7 +104,7 @@ export function usePlanStore(settings, cupboard = [], onCupboardChange) {
   const markEaten = useCallback((day, slot, value) => {
     updateSlot(day, slot, { eaten: value })
 
-    const entry = plan[day]?.slots[slot]
+    const entry = plan.find(d => d.day === day)?.slots[slot]
     const recipe = entry ? getRecipe(entry.recipeId) : null
     if (recipe?.ingredients) {
       const scaledOverrides = entry.adjustments?.scaledIngredients ?? {}

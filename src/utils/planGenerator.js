@@ -82,22 +82,41 @@ export function pickSideForDay(daySlots, calorieTarget, proteinTarget) {
   const sidesPool = recipes.filter(r => r.mealTypes.includes('sides'))
   if (!sidesPool.length) return null
 
-  const totalProtein = ['lunch', 'dinner', 'treat'].reduce((s, slot) => {
+  const mealSlots = ['lunch', 'dinner', 'treat']
+
+  const totalProtein = mealSlots.reduce((s, slot) => {
     const r = recipes.find(x => x.id === daySlots[slot]?.recipeId)
     return s + (r?.macrosPerServing?.protein ?? 0)
   }, 0)
 
   if (proteinTarget - totalProtein <= 15) return null
 
-  // Pick the most protein-efficient side (protein per calorie)
-  return [...sidesPool].sort((a, b) =>
-    (b.macrosPerServing.protein / b.macrosPerServing.calories) -
-    (a.macrosPerServing.protein / a.macrosPerServing.calories)
-  )[0]
+  const totalCalories = mealSlots.reduce((s, slot) => {
+    const r = recipes.find(x => x.id === daySlots[slot]?.recipeId)
+    return s + (r?.macrosPerServing?.calories ?? 0)
+  }, 0)
+
+  const calBudget = calorieTarget - totalCalories
+
+  // Pick randomly from the top-3 most protein-efficient sides that fit the remaining budget
+  const candidates = [...sidesPool]
+    .filter(s => s.macrosPerServing.calories <= calBudget)
+    .sort((a, b) =>
+      (b.macrosPerServing.protein / b.macrosPerServing.calories) -
+      (a.macrosPerServing.protein / a.macrosPerServing.calories)
+    )
+    .slice(0, 3)
+
+  if (candidates.length === 0) return null
+  return candidates[Math.floor(Math.random() * candidates.length)]
 }
+
+const SIDE_CAL_RESERVE = 175
 
 export function generatePlan(settings, ratings = {}, cupboard = []) {
   const { calorieTarget = 1600, defaultBatchSize = 4, proteinTarget, treatsPerWeek = 3 } = settings
+  // Reserve calories for a side when a protein target is set, so the side fits within the daily budget
+  const effectiveCalTarget = proteinTarget ? calorieTarget - SIDE_CAL_RESERVE : calorieTarget
 
   const lunchPool = recipes.filter(r => r.mealTypes.includes('lunch'))
   const dinnerPool = recipes.filter(r => r.mealTypes.includes('dinner'))
@@ -126,9 +145,9 @@ export function generatePlan(settings, ratings = {}, cupboard = []) {
 
     const treat = treatDays.has(day) ? weightedPick(treatPool, ratings, new Set(), cupboard) : null
 
-    // Cap at target if over
+    // Cap at effective target if over
     const total = sumCalories(lunch, dinner, treat)
-    if (total > calorieTarget) {
+    if (total > effectiveCalTarget) {
       const treatCal = treat?.macrosPerServing?.calories ?? 0
       const sorted = [
         { recipe: lunch, pool: lunchPool, slot: 'lunch' },
@@ -136,7 +155,7 @@ export function generatePlan(settings, ratings = {}, cupboard = []) {
       ].sort((a, b) => b.recipe.macrosPerServing.calories - a.recipe.macrosPerServing.calories)
 
       for (const item of sorted) {
-        const budget = calorieTarget - treatCal -
+        const budget = effectiveCalTarget - treatCal -
           (item.slot === 'lunch' ? dinner : lunch).macrosPerServing.calories
         const cheaper = item.pool
           .filter(r => r.macrosPerServing.calories <= budget && r.id !== item.recipe.id)
@@ -149,8 +168,8 @@ export function generatePlan(settings, ratings = {}, cupboard = []) {
       }
     }
 
-    // Upgrade toward target using rating-weighted pair selection
-    ;({ lunch, dinner } = upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTarget, ratings, cupboard))
+    // Upgrade toward effective target using rating-weighted pair selection
+    ;({ lunch, dinner } = upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, effectiveCalTarget, ratings, cupboard))
 
     recentCuisines.push(lunch.cuisine, dinner.cuisine)
 

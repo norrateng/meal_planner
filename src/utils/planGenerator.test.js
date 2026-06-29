@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { generatePlan, pickReplacement, pickSideForDay } from './planGenerator'
 import recipes from '../data/recipes.json'
 
-const defaultSettings = { calorieTarget: 1600, defaultBatchSize: 4 }
+const defaultSettings = { calorieTarget: 1600, defaultBatchSize: 4, treatsPerWeek: 7 }
 
 function getDayCalories(day) {
   return ['lunch', 'dinner', 'treat'].reduce((sum, slot) => {
@@ -87,8 +87,21 @@ describe('generatePlan', () => {
   it('treats get batchSize 1', () => {
     const plan = generatePlan(defaultSettings)
     for (const day of plan) {
-      expect(day.slots.treat.batchSize).toBe(1)
+      if (day.slots.treat) expect(day.slots.treat.batchSize).toBe(1)
     }
+  })
+
+  it('no treat slots when treatsPerWeek is 0', () => {
+    const plan = generatePlan({ ...defaultSettings, treatsPerWeek: 0 })
+    for (const day of plan) {
+      expect(day.slots.treat).toBeNull()
+    }
+  })
+
+  it('treat slot count matches treatsPerWeek setting', () => {
+    const plan = generatePlan({ ...defaultSettings, treatsPerWeek: 3 })
+    const treatCount = plan.filter(d => d.slots.treat !== null).length
+    expect(treatCount).toBe(3)
   })
 
   it('sides slot is present when protein target is high and null otherwise', () => {

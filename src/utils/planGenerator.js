@@ -36,9 +36,10 @@ function sumCalories(...mealRecipes) {
  * that brings the total within ±100 of calorieTarget without exceeding it.
  * Among pairs that hit the target window, prefers highest combined rating weight.
  * Falls back to the closest-calorie pair if no pair reaches the window.
+ * treat may be null on no-treat days.
  */
 function upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTarget, ratings, cupboard) {
-  const treatCal = treat.macrosPerServing.calories
+  const treatCal = treat?.macrosPerServing?.calories ?? 0
   const currentTotal = sumCalories(lunch, dinner, treat)
   if (currentTotal >= calorieTarget - 100) return { lunch, dinner }
 
@@ -96,11 +97,16 @@ export function pickSideForDay(daySlots, calorieTarget, proteinTarget) {
 }
 
 export function generatePlan(settings, ratings = {}, cupboard = []) {
-  const { calorieTarget = 1600, defaultBatchSize = 4, proteinTarget } = settings
+  const { calorieTarget = 1600, defaultBatchSize = 4, proteinTarget, treatsPerWeek = 3 } = settings
 
   const lunchPool = recipes.filter(r => r.mealTypes.includes('lunch'))
   const dinnerPool = recipes.filter(r => r.mealTypes.includes('dinner'))
   const treatPool = recipes.filter(r => r.mealTypes.includes('treat'))
+
+  // Randomly distribute treats across the week
+  const treatDays = new Set(
+    [...Array(7).keys()].sort(() => Math.random() - 0.5).slice(0, Math.min(treatsPerWeek, 7))
+  )
 
   const days = []
   const recentCuisines = []
@@ -118,18 +124,19 @@ export function generatePlan(settings, ratings = {}, cupboard = []) {
     ])
     let dinner = weightedPick(dinnerPool, ratings, avoidForDinner, cupboard)
 
-    const treat = weightedPick(treatPool, ratings, new Set(), cupboard)
+    const treat = treatDays.has(day) ? weightedPick(treatPool, ratings, new Set(), cupboard) : null
 
     // Cap at target if over
     const total = sumCalories(lunch, dinner, treat)
     if (total > calorieTarget) {
+      const treatCal = treat?.macrosPerServing?.calories ?? 0
       const sorted = [
         { recipe: lunch, pool: lunchPool, slot: 'lunch' },
         { recipe: dinner, pool: dinnerPool, slot: 'dinner' },
       ].sort((a, b) => b.recipe.macrosPerServing.calories - a.recipe.macrosPerServing.calories)
 
       for (const item of sorted) {
-        const budget = calorieTarget - treat.macrosPerServing.calories -
+        const budget = calorieTarget - treatCal -
           (item.slot === 'lunch' ? dinner : lunch).macrosPerServing.calories
         const cheaper = item.pool
           .filter(r => r.macrosPerServing.calories <= budget && r.id !== item.recipe.id)
@@ -150,7 +157,7 @@ export function generatePlan(settings, ratings = {}, cupboard = []) {
     const slots = {
       lunch: makePlanEntry(day, 'lunch', lunch, defaultBatchSize),
       dinner: makePlanEntry(day, 'dinner', dinner, defaultBatchSize),
-      treat: makePlanEntry(day, 'treat', treat, defaultBatchSize),
+      treat: treat ? makePlanEntry(day, 'treat', treat, defaultBatchSize) : null,
     }
 
     const sideRecipe = pickSideForDay(slots, calorieTarget, proteinTarget)

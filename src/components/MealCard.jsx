@@ -20,7 +20,7 @@ export default function MealCard({ entry, slot, rating, onOpen, onRate, onSwap, 
           {recipe.name}
           {entry.isBatchRepeat && <span className="ml-1 text-[10px] text-gray-400">(batch)</span>}
         </p>
-        <span className="text-xs text-gray-500 shrink-0">{macros.calories} kcal</span>
+        <span className="text-xs text-gray-500 shrink-0">{macros.calories} kcal · {macros.protein}g P</span>
       </div>
 
       <div className="flex items-center gap-1 px-2 pb-1.5 border-t border-gray-50">

@@ -14,7 +14,7 @@ export function applyBatchSchedule(days) {
     slots: {
       lunch: { ...d.slots.lunch },
       dinner: { ...d.slots.dinner },
-      treat: { ...d.slots.treat },
+      treat: d.slots.treat ? { ...d.slots.treat } : null,
       sides: d.slots.sides ? { ...d.slots.sides } : null,
     },
   }))

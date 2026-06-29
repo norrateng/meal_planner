@@ -3,8 +3,8 @@ import DayCard from './DayCard'
 import SwapPicker from './SwapPicker'
 import { usePlanStore } from '../utils/planStore'
 
-export default function WeekView({ settings, cupboard, onOpenMeal }) {
-  const { plan, ratings, regenerate, swapSlot, rateRecipe, markEaten, archiveAndRegenerate } = usePlanStore(settings, cupboard)
+export default function WeekView({ settings, cupboard, onOpenMeal, onCupboardChange }) {
+  const { plan, ratings, regenerate, swapSlot, rateRecipe, markEaten, archiveAndRegenerate } = usePlanStore(settings, cupboard, onCupboardChange)
   const [pickerTarget, setPickerTarget] = useState(null)
 
   function handleArchive() {

@@ -52,7 +52,7 @@ export default function App() {
       </header>
 
       <main className="flex-1 overflow-auto">
-        {view === VIEWS.week && <WeekView settings={settings} cupboard={cupboard} onOpenMeal={openMeal} />}
+        {view === VIEWS.week && <WeekView settings={settings} cupboard={cupboard} onOpenMeal={openMeal} onCupboardChange={refreshCupboard} />}
         {view === VIEWS.meal && <MealDetail slot={selectedSlot} settings={settings} onBack={() => setView(VIEWS.week)} />}
         {view === VIEWS.shopping && <ShoppingList settings={settings} onCupboardChange={refreshCupboard} />}
         {view === VIEWS.recipes && <Recipes />}

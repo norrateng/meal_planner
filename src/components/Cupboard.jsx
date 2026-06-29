@@ -1,8 +1,5 @@
 import { useState } from 'react'
 import { loadCupboard, saveCupboard } from '../utils/storage'
-import { deductCookedIngredients } from '../utils/cupboard'
-import { loadCurrentPlan } from '../utils/storage'
-import recipes from '../data/recipes.json'
 
 const UNITS = ['g', 'kg', 'ml', 'L', 'whole', 'clove', 'slice', 'cube', 'stick']
 
@@ -17,7 +14,6 @@ export default function Cupboard({ onCupboardChange }) {
   const [unit, setUnit] = useState('g')
   const [editId, setEditId] = useState(null)
   const [editQty, setEditQty] = useState('')
-  const [deductMessage, setDeductMessage] = useState(null)
 
   function persist(next) {
     saveCupboard(next)
@@ -50,45 +46,15 @@ export default function Cupboard({ onCupboardChange }) {
     setEditId(null)
   }
 
-  function deductEatenMeals() {
-    const plan = loadCurrentPlan()
-    if (!plan) { setDeductMessage('No plan loaded.'); return }
-
-    const eatenSlots = plan.flatMap(d => ['lunch', 'dinner'].map(s => d.slots[s])).filter(e => e?.eaten)
-    if (eatenSlots.length === 0) {
-      setDeductMessage('No meals marked as eaten this week. Mark meals as eaten in the Week tab first.')
-      return
-    }
-
-    const updated = deductCookedIngredients(plan, items, recipes)
-    persist(updated)
-    setDeductMessage(`Done — ingredients for ${eatenSlots.length} eaten meal${eatenSlots.length !== 1 ? 's' : ''} removed from cupboard.`)
-  }
-
   return (
     <div className="p-4 space-y-4">
-      <div className="flex items-center justify-between">
-        <div>
-          <h2 className="font-bold text-gray-900">Cupboard</h2>
-          <p className="text-xs text-gray-500">{items.length} item{items.length !== 1 ? 's' : ''} in stock</p>
-        </div>
-        <button
-          onClick={deductEatenMeals}
-          className="text-sm border border-orange-300 bg-orange-50 text-orange-700 px-3 py-1.5 rounded-lg"
-        >
-          Deduct eaten meals
-        </button>
+      <div>
+        <h2 className="font-bold text-gray-900">Cupboard</h2>
+        <p className="text-xs text-gray-500">{items.length} item{items.length !== 1 ? 's' : ''} in stock</p>
       </div>
 
-      {deductMessage && (
-        <div className="bg-orange-50 border border-orange-200 rounded-lg px-3 py-2 text-xs text-orange-700 flex items-start justify-between gap-2">
-          <span>{deductMessage}</span>
-          <button onClick={() => setDeductMessage(null)} className="text-orange-400 hover:text-orange-700 shrink-0">✕</button>
-        </div>
-      )}
-
       <div className="bg-blue-50 border border-blue-100 rounded-lg px-3 py-2 text-xs text-blue-700">
-        Items in your cupboard are used to favour recipes that use your existing stock when the next plan is generated.
+        Items in your cupboard are used to favour recipes that use your existing stock when the next plan is generated. Mark meals as eaten in the Week tab to automatically remove their ingredients.
       </div>
 
       {/* Add item form */}

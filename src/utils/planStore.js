@@ -3,7 +3,7 @@ import { generatePlan, pickReplacement, pickSideForDay } from './planGenerator'
 import { applyBatchSchedule } from './batchScheduler'
 import {
   loadCurrentPlan, saveCurrentPlan, loadRatings, saveRatings, archiveCurrentPlan,
-  clearShoppingChecked,
+  clearShoppingChecked, consumeFromCupboard, addToCupboard,
 } from './storage'
 import recipes from '../data/recipes.json'
 
@@ -25,7 +25,7 @@ function applyPickSides(plan, settings) {
   })
 }
 
-export function usePlanStore(settings, cupboard = []) {
+export function usePlanStore(settings, cupboard = [], onCupboardChange) {
   const [plan, setPlanState] = useState(() => {
     const stored = loadCurrentPlan()
     if (stored) return stored
@@ -87,7 +87,6 @@ export function usePlanStore(settings, cupboard = []) {
         )
       }
 
-      // Recompute sides for all days whenever a main meal changes
       const result = slot !== 'sides' ? applyPickSides(next, settings) : next
       saveCurrentPlan(result)
       return result
@@ -104,7 +103,21 @@ export function usePlanStore(settings, cupboard = []) {
 
   const markEaten = useCallback((day, slot, value) => {
     updateSlot(day, slot, { eaten: value })
-  }, [updateSlot])
+
+    const entry = plan[day]?.slots[slot]
+    const recipe = entry ? getRecipe(entry.recipeId) : null
+    if (recipe?.ingredients) {
+      const scaledOverrides = entry.adjustments?.scaledIngredients ?? {}
+      const ings = recipe.ingredients.map(ing => ({
+        name: ing.name,
+        quantity: scaledOverrides[ing.name] ?? ing.quantity,
+        unit: ing.unit,
+      }))
+      if (value) consumeFromCupboard(ings)
+      else addToCupboard(ings)
+      onCupboardChange?.()
+    }
+  }, [plan, updateSlot, onCupboardChange])
 
   const archiveAndRegenerate = useCallback((weekLabel) => {
     archiveCurrentPlan(plan, weekLabel)

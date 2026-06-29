@@ -8,7 +8,7 @@ const KEYS = {
 }
 
 const DEFAULTS = {
-  settings: { calorieTarget: 1600, defaultBatchSize: 4, useImperial: false, proteinTarget: 150 },
+  settings: { calorieTarget: 1600, defaultBatchSize: 4, useImperial: false, proteinTarget: 150, treatsPerWeek: 3 },
   ratings: {},
   history: [],
   currentPlan: null,

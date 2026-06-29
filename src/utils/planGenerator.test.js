@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { generatePlan, pickReplacement, pickSideForDay } from './planGenerator'
+import { generatePlan, pickReplacement, pickSideForDay, getWeight } from './planGenerator'
 import recipes from '../data/recipes.json'
 
 const defaultSettings = { calorieTarget: 1600, defaultBatchSize: 4, treatsPerWeek: 7 }
@@ -116,6 +116,23 @@ describe('generatePlan', () => {
     }
   })
 
+  it('cuisine weights increase frequency of boosted cuisine', () => {
+    const cuisineWeights = { Indian: 50, British: 6, Italian: 6, Chinese: 6, Thai: 6, Japanese: 6, Mediterranean: 6, Mexican: 6, 'Middle Eastern': 6 }
+    const counts = {}
+    for (let i = 0; i < 40; i++) {
+      const plan = generatePlan({ ...defaultSettings, cuisineWeights })
+      for (const day of plan) {
+        for (const slot of ['lunch', 'dinner']) {
+          const r = recipes.find(x => x.id === day.slots[slot].recipeId)
+          if (r) counts[r.cuisine] = (counts[r.cuisine] ?? 0) + 1
+        }
+      }
+    }
+    // Indian boosted to ~50% share vs ~6% each for others → should dominate
+    const total = Object.values(counts).reduce((a, b) => a + b, 0)
+    expect((counts['Indian'] ?? 0) / total).toBeGreaterThan(0.2)
+  })
+
   it('cupboard bonus increases weight of matching recipes', () => {
     const cupboard = [
       { name: 'chicken breast', quantity: 1000, unit: 'g' },
@@ -134,6 +151,20 @@ describe('generatePlan', () => {
       }
     }
     expect(counts['chicken-tikka-masala'] ?? 0).toBeGreaterThan(0)
+  })
+})
+
+describe('getWeight', () => {
+  it('cuisine weight of 0 makes a recipe weight near zero', () => {
+    const w = getWeight('spaghetti-bolognese', {}, [], { Italian: 0, British: 100 })
+    expect(w).toBe(0)
+  })
+
+  it('equal cuisine weights produce same result as no weights', () => {
+    const equal = { Italian: 50, British: 50 }
+    const wWith = getWeight('spaghetti-bolognese', {}, [], equal)
+    const wWithout = getWeight('spaghetti-bolognese', {}, [], {})
+    expect(wWith).toBeCloseTo(wWithout, 5)
   })
 })
 

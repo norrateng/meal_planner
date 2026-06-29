@@ -8,7 +8,7 @@ const KEYS = {
 }
 
 const DEFAULTS = {
-  settings: { calorieTarget: 1600, defaultBatchSize: 1, useImperial: false, proteinTarget: 120, treatsPerWeek: 3 },
+  settings: { calorieTarget: 1600, defaultBatchSize: 1, useImperial: false, proteinTarget: 120, treatsPerWeek: 3, cuisineWeights: {} },
   ratings: {},
   history: [],
   currentPlan: null,
@@ -68,6 +68,10 @@ export function archiveCurrentPlan(plan, weekLabel) {
 
 export function clearCurrentPlan() {
   clear(KEYS.currentPlan)
+}
+
+export function clearHistory() {
+  write(KEYS.history, [])
 }
 
 export function loadCupboard() {

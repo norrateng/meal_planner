@@ -6,18 +6,28 @@ import { getCupboardScore } from './cupboard'
  * Uses exponential scaling so a 10-upvote recipe is ~7.6x more likely than neutral,
  * and a 10-downvote recipe is ~0.13x (very rarely shown).
  */
-export function getWeight(recipeId, ratings, cupboard = []) {
+export function getWeight(recipeId, ratings, cupboard = [], cuisineWeights = {}) {
   const score = ratings[recipeId] ?? 0
   const ratingWeight = Math.max(0.05, 1.5 ** (score * 0.5))
   const recipe = recipes.find(r => r.id === recipeId)
   const cupboardBonus = recipe ? 1 + getCupboardScore(recipe, cupboard) * 2 : 1
-  return ratingWeight * cupboardBonus
+
+  let cuisineFactor = 1
+  if (recipe && Object.keys(cuisineWeights).length > 0) {
+    const total = Object.values(cuisineWeights).reduce((a, b) => a + b, 0)
+    const numCuisines = Object.keys(cuisineWeights).length
+    const equalShare = total / numCuisines
+    const share = cuisineWeights[recipe.cuisine] ?? equalShare
+    cuisineFactor = equalShare > 0 ? share / equalShare : 1
+  }
+
+  return ratingWeight * cupboardBonus * cuisineFactor
 }
 
-function weightedPick(pool, ratings, exclude = new Set(), cupboard = []) {
+function weightedPick(pool, ratings, exclude = new Set(), cupboard = [], cuisineWeights = {}) {
   const candidates = pool.filter(r => !exclude.has(r.id))
   if (candidates.length === 0) return pool[Math.floor(Math.random() * pool.length)]
-  const weights = candidates.map(r => getWeight(r.id, ratings, cupboard))
+  const weights = candidates.map(r => getWeight(r.id, ratings, cupboard, cuisineWeights))
   const total = weights.reduce((a, b) => a + b, 0)
   let rand = Math.random() * total
   for (let i = 0; i < candidates.length; i++) {
@@ -38,7 +48,7 @@ function sumCalories(...mealRecipes) {
  * Falls back to the closest-calorie pair if no pair reaches the window.
  * treat may be null on no-treat days.
  */
-function upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTarget, ratings, cupboard) {
+function upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTarget, ratings, cupboard, cuisineWeights = {}) {
   const treatCal = treat?.macrosPerServing?.calories ?? 0
   const currentTotal = sumCalories(lunch, dinner, treat)
   if (currentTotal >= calorieTarget - 100) return { lunch, dinner }
@@ -55,7 +65,7 @@ function upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTar
       if (t > calorieTarget) continue
 
       if (t >= calorieTarget - 100) {
-        const score = getWeight(l.id, ratings, cupboard) * getWeight(d.id, ratings, cupboard)
+        const score = getWeight(l.id, ratings, cupboard, cuisineWeights) * getWeight(d.id, ratings, cupboard, cuisineWeights)
         if (score > bestWindowScore) {
           bestWindowScore = score
           bestInWindow = { lunch: l, dinner: d }
@@ -101,7 +111,7 @@ export function pickSideForDay(daySlots, calorieTarget, proteinTarget) {
 }
 
 export function generatePlan(settings, ratings = {}, cupboard = []) {
-  const { calorieTarget = 1600, defaultBatchSize = 4, proteinTarget, treatsPerWeek = 3 } = settings
+  const { calorieTarget = 1600, defaultBatchSize = 4, proteinTarget, treatsPerWeek = 3, cuisineWeights = {} } = settings
 
   const lunchPool = recipes.filter(r => r.mealTypes.includes('lunch'))
   const dinnerPool = recipes.filter(r => r.mealTypes.includes('dinner'))
@@ -120,15 +130,15 @@ export function generatePlan(settings, ratings = {}, cupboard = []) {
 
     let lunch = weightedPick(lunchPool, ratings,
       new Set(lunchPool.filter(r => recentSet.has(r.cuisine)).map(r => r.id)),
-      cupboard)
+      cupboard, cuisineWeights)
 
     const avoidForDinner = new Set([
       ...dinnerPool.filter(r => recentSet.has(r.cuisine)).map(r => r.id),
       ...dinnerPool.filter(r => r.cuisine === lunch.cuisine).map(r => r.id),
     ])
-    let dinner = weightedPick(dinnerPool, ratings, avoidForDinner, cupboard)
+    let dinner = weightedPick(dinnerPool, ratings, avoidForDinner, cupboard, cuisineWeights)
 
-    const treat = treatDays.has(day) ? weightedPick(treatPool, ratings, new Set(), cupboard) : null
+    const treat = treatDays.has(day) ? weightedPick(treatPool, ratings, new Set(), cupboard, cuisineWeights) : null
 
     // Cap at target if over
     const total = sumCalories(lunch, dinner, treat)
@@ -154,7 +164,7 @@ export function generatePlan(settings, ratings = {}, cupboard = []) {
     }
 
     // Upgrade toward target using rating-weighted pair selection
-    ;({ lunch, dinner } = upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTarget, ratings, cupboard))
+    ;({ lunch, dinner } = upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTarget, ratings, cupboard, cuisineWeights))
 
     recentCuisines.push(lunch.cuisine, dinner.cuisine)
 
@@ -177,7 +187,7 @@ export function generatePlan(settings, ratings = {}, cupboard = []) {
  * Pick a replacement recipe for a single slot without touching the rest of the plan.
  */
 export function pickReplacement(plan, day, slotName, settings, ratings = {}, cupboard = []) {
-  const { calorieTarget = 1600 } = settings
+  const { calorieTarget = 1600, cuisineWeights = {} } = settings
   const entry = plan[day]?.slots[slotName]
   if (!entry) return null
 
@@ -215,7 +225,7 @@ export function pickReplacement(plan, day, slotName, settings, ratings = {}, cup
   const budgeted = pool.filter(r => !exclude.has(r.id) && r.macrosPerServing.calories <= budget)
   const pickPool = budgeted.length > 0 ? budgeted : pool.filter(r => !exclude.has(r.id))
 
-  return weightedPick(pickPool.length > 0 ? pickPool : pool, ratings, new Set([entry.recipeId]), cupboard)
+  return weightedPick(pickPool.length > 0 ? pickPool : pool, ratings, new Set([entry.recipeId]), cupboard, cuisineWeights)
 }
 
 function makePlanEntry(day, slot, recipe, batchSize) {

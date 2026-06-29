@@ -4523,5 +4523,326 @@
     "ingredients": [
       { "name": "Mixed nuts", "quantity": 40, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": true, "substitute": null }
     ]
+  },
+  {
+    "id": "butter-chicken",
+    "name": "Butter Chicken",
+    "cuisine": "Indian",
+    "mealTypes": ["lunch", "dinner"],
+    "prepTime": 15,
+    "cookTime": 35,
+    "defaultBatchSize": 4,
+    "prepNotes": "Freezes well for up to 3 months. Marinate chicken overnight for deeper flavour. Serve with basmati rice or naan.",
+    "macrosPerServing": {
+      "calories": 550,
+      "protein": 45,
+      "carbs": 48,
+      "fat": 18
+    },
+    "ingredients": [
+      { "name": "chicken breast", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": "chicken thigh" },
+      { "name": "basmati rice", "quantity": 280, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
+      { "name": "tomato passata", "quantity": 400, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "tinned chopped tomatoes" },
+      { "name": "double cream", "quantity": 100, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "coconut cream" },
+      { "name": "butter", "quantity": 40, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
+      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "garlic cloves", "quantity": 4, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "fresh ginger", "quantity": 25, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "garam masala", "quantity": 12, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
+      { "name": "Greek yoghurt", "quantity": 100, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null }
+    ],
+    "method": [
+      "Marinate chicken in yoghurt, half the garam masala, garlic and ginger. Rest 30 min.",
+      "Grill or pan-fry chicken until cooked through. Slice.",
+      "Melt butter, fry onion until golden. Add remaining spices, garlic and ginger.",
+      "Add passata and cream. Simmer 15 min. Add chicken.",
+      "Serve over basmati rice."
+    ]
+  },
+  {
+    "id": "saag-paneer",
+    "name": "Saag Paneer",
+    "cuisine": "Indian",
+    "mealTypes": ["lunch", "dinner"],
+    "prepTime": 10,
+    "cookTime": 30,
+    "defaultBatchSize": 4,
+    "prepNotes": "A vegetarian classic. Freezes well. Paneer can be swapped for tofu. Serve with naan or rice.",
+    "macrosPerServing": {
+      "calories": 480,
+      "protein": 28,
+      "carbs": 52,
+      "fat": 18
+    },
+    "ingredients": [
+      { "name": "paneer", "quantity": 400, "unit": "g", "aisle": "dairy", "isPrimaryProtein": true, "substitute": "firm tofu" },
+      { "name": "baby spinach", "quantity": 400, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": "frozen spinach" },
+      { "name": "basmati rice", "quantity": 280, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 77 },
+      { "name": "onion", "quantity": 1, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "fresh ginger", "quantity": 20, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "tinned chopped tomatoes", "quantity": 200, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
+      { "name": "double cream", "quantity": 60, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "coconut cream" },
+      { "name": "garam masala", "quantity": 10, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
+      { "name": "ground cumin", "quantity": 5, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+    ],
+    "method": [
+      "Cube paneer and pan-fry until golden on all sides. Set aside.",
+      "Fry onion until golden. Add garlic, ginger and spices.",
+      "Add tomatoes, cook 5 min. Add spinach and wilt.",
+      "Blend sauce until smooth. Return to pan with cream and paneer.",
+      "Simmer 5 min. Serve with basmati rice."
+    ]
+  },
+  {
+    "id": "mango-kulfi",
+    "name": "Mango Kulfi",
+    "cuisine": "Indian",
+    "mealTypes": ["treat"],
+    "prepTime": 10,
+    "cookTime": 0,
+    "defaultBatchSize": 6,
+    "prepNotes": "Freeze overnight. Remove from freezer 5 min before serving to soften slightly.",
+    "macrosPerServing": {
+      "calories": 195,
+      "protein": 5,
+      "carbs": 30,
+      "fat": 7
+    },
+    "ingredients": [
+      { "name": "mango pulp", "quantity": 400, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": "ripe fresh mango, blended" },
+      { "name": "whole milk", "quantity": 300, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
+      { "name": "condensed milk", "quantity": 100, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "2 tbsp honey + 50ml extra cream" },
+      { "name": "double cream", "quantity": 100, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
+      { "name": "ground cardamom", "quantity": 3, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+    ],
+    "method": [
+      "Blend mango pulp, milk, condensed milk, cream and cardamom until smooth.",
+      "Pour into kulfi moulds or small cups.",
+      "Freeze for at least 6 hours or overnight.",
+      "Dip moulds briefly in warm water to unmould. Serve immediately."
+    ]
+  },
+  {
+    "id": "kung-pao-chicken",
+    "name": "Kung Pao Chicken",
+    "cuisine": "Chinese",
+    "mealTypes": ["lunch", "dinner"],
+    "prepTime": 15,
+    "cookTime": 15,
+    "defaultBatchSize": 4,
+    "prepNotes": "Best eaten fresh. Sauce can be made ahead. Adjust chilli to taste — traditionally quite hot.",
+    "macrosPerServing": {
+      "calories": 490,
+      "protein": 40,
+      "carbs": 52,
+      "fat": 14
+    },
+    "ingredients": [
+      { "name": "chicken breast", "quantity": 700, "unit": "g", "aisle": "meat", "isPrimaryProtein": true, "substitute": null },
+      { "name": "jasmine rice", "quantity": 280, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null, "carbContent": 80 },
+      { "name": "unsalted peanuts", "quantity": 80, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "cashew nuts" },
+      { "name": "red pepper", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "spring onions", "quantity": 4, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "soy sauce", "quantity": 45, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
+      { "name": "rice vinegar", "quantity": 20, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "white wine vinegar" },
+      { "name": "chilli flakes", "quantity": 5, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "2 dried red chillies" },
+      { "name": "cornflour", "quantity": 15, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+    ],
+    "method": [
+      "Dice chicken. Toss in cornflour, soy sauce and a pinch of salt. Marinate 10 min.",
+      "Mix soy, rice vinegar, 1 tsp sugar and 1 tsp cornflour for the sauce.",
+      "Stir-fry chilli flakes in hot oil 30 sec. Add chicken, cook 4 min.",
+      "Add peppers, garlic and spring onions. Stir-fry 2 min.",
+      "Pour in sauce and peanuts. Toss until glossy. Serve with rice."
+    ]
+  },
+  {
+    "id": "prawn-chow-mein",
+    "name": "Prawn Chow Mein",
+    "cuisine": "Chinese",
+    "mealTypes": ["lunch", "dinner"],
+    "prepTime": 10,
+    "cookTime": 15,
+    "defaultBatchSize": 4,
+    "prepNotes": "Use cooked egg noodles from a packet for speed. Best eaten fresh — noodles absorb sauce on standing.",
+    "macrosPerServing": {
+      "calories": 460,
+      "protein": 34,
+      "carbs": 56,
+      "fat": 10
+    },
+    "ingredients": [
+      { "name": "king prawns", "quantity": 600, "unit": "g", "aisle": "frozen", "isPrimaryProtein": true, "substitute": "chicken breast, sliced" },
+      { "name": "egg noodles", "quantity": 300, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": null, "carbContent": 60 },
+      { "name": "beansprouts", "quantity": 150, "unit": "g", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "spring onions", "quantity": 4, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "mixed peppers", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "garlic cloves", "quantity": 3, "unit": "clove", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "soy sauce", "quantity": 60, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
+      { "name": "oyster sauce", "quantity": 30, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "hoisin sauce" },
+      { "name": "sesame oil", "quantity": 15, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": null }
+    ],
+    "method": [
+      "Cook noodles per packet, drain and toss with sesame oil.",
+      "Stir-fry prawns in very hot wok until pink, 2 min. Set aside.",
+      "Stir-fry peppers and garlic 2 min. Add beansprouts.",
+      "Add noodles, soy and oyster sauce. Toss everything together.",
+      "Return prawns. Top with spring onions and serve immediately."
+    ]
+  },
+  {
+    "id": "sesame-mochi",
+    "name": "Black Sesame Mochi",
+    "cuisine": "Chinese",
+    "mealTypes": ["treat"],
+    "prepTime": 20,
+    "cookTime": 5,
+    "defaultBatchSize": 8,
+    "prepNotes": "Coat in sesame seeds just before serving. Best eaten same day — dust with extra cornflour if sticky.",
+    "macrosPerServing": {
+      "calories": 215,
+      "protein": 4,
+      "carbs": 34,
+      "fat": 7
+    },
+    "ingredients": [
+      { "name": "glutinous rice flour", "quantity": 200, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
+      { "name": "black sesame paste", "quantity": 100, "unit": "g", "aisle": "international", "isPrimaryProtein": true, "substitute": "peanut butter + 1 tsp sesame oil" },
+      { "name": "sesame seeds", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
+      { "name": "sugar", "quantity": 40, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "honey" },
+      { "name": "boiling water", "quantity": 180, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+    ],
+    "method": [
+      "Mix sesame paste with 2 tsp sugar. Roll into 8 small balls and chill 15 min.",
+      "Combine rice flour and remaining sugar. Gradually mix in boiling water to form a soft dough.",
+      "Divide dough into 8 pieces. Flatten each into a disc.",
+      "Wrap dough around a sesame filling ball. Pinch to seal.",
+      "Roll in sesame seeds. Steam 5 min or until glossy. Serve warm."
+    ]
+  },
+  {
+    "id": "mango-sticky-rice",
+    "name": "Mango Sticky Rice",
+    "cuisine": "Thai",
+    "mealTypes": ["treat"],
+    "prepTime": 10,
+    "cookTime": 30,
+    "defaultBatchSize": 4,
+    "prepNotes": "Soak glutinous rice overnight for best texture. Assemble just before serving — the mango juices soften the rice.",
+    "macrosPerServing": {
+      "calories": 375,
+      "protein": 6,
+      "carbs": 62,
+      "fat": 12
+    },
+    "ingredients": [
+      { "name": "glutinous rice", "quantity": 300, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": null, "carbContent": 80 },
+      { "name": "ripe mango", "quantity": 2, "unit": "whole", "aisle": "produce", "isPrimaryProtein": false, "substitute": null },
+      { "name": "coconut cream", "quantity": 250, "unit": "ml", "aisle": "international", "isPrimaryProtein": false, "substitute": "full-fat coconut milk" },
+      { "name": "sugar", "quantity": 50, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "honey" },
+      { "name": "sesame seeds", "quantity": 15, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null }
+    ],
+    "method": [
+      "Soak glutinous rice 2-4h (or overnight). Drain and steam 25-30 min until tender.",
+      "Warm coconut cream with sugar and a pinch of salt. Reserve 4 tbsp for topping.",
+      "Mix cooked rice with coconut cream mixture. Rest 10 min to absorb.",
+      "Peel and slice mango.",
+      "Serve rice alongside mango. Drizzle reserved coconut cream over. Top with sesame seeds."
+    ]
+  },
+  {
+    "id": "matcha-pudding",
+    "name": "Matcha Pudding",
+    "cuisine": "Japanese",
+    "mealTypes": ["treat"],
+    "prepTime": 10,
+    "cookTime": 5,
+    "defaultBatchSize": 4,
+    "prepNotes": "Set in the fridge for at least 2 hours. Use culinary grade matcha for a deeper flavour.",
+    "macrosPerServing": {
+      "calories": 185,
+      "protein": 6,
+      "carbs": 20,
+      "fat": 8
+    },
+    "ingredients": [
+      { "name": "whole milk", "quantity": 500, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "oat milk" },
+      { "name": "matcha powder", "quantity": 12, "unit": "g", "aisle": "international", "isPrimaryProtein": false, "substitute": null },
+      { "name": "sugar", "quantity": 50, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "honey" },
+      { "name": "double cream", "quantity": 80, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
+      { "name": "gelatine sheets", "quantity": 6, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "1 tsp agar powder" }
+    ],
+    "method": [
+      "Soak gelatine sheets in cold water 5 min.",
+      "Whisk matcha powder into a small amount of warm milk to form a paste.",
+      "Heat remaining milk with sugar until just below boiling. Whisk in matcha paste.",
+      "Squeeze out gelatine, dissolve in warm milk mixture. Stir in cream.",
+      "Pour into 4 ramekins and refrigerate 2h until set."
+    ]
+  },
+  {
+    "id": "protein-pancakes",
+    "name": "Protein Pancakes",
+    "cuisine": "British",
+    "mealTypes": ["treat"],
+    "prepTime": 5,
+    "cookTime": 15,
+    "defaultBatchSize": 4,
+    "prepNotes": "Batter keeps overnight in the fridge. Cook low and slow for fluffy results. Serve with berries and Greek yoghurt.",
+    "macrosPerServing": {
+      "calories": 250,
+      "protein": 18,
+      "carbs": 24,
+      "fat": 8
+    },
+    "ingredients": [
+      { "name": "vanilla protein powder", "quantity": 80, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": true, "substitute": null },
+      { "name": "rolled oats", "quantity": 80, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
+      { "name": "eggs", "quantity": 4, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null },
+      { "name": "whole milk", "quantity": 200, "unit": "ml", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "oat milk" },
+      { "name": "baking powder", "quantity": 6, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
+      { "name": "mixed frozen berries", "quantity": 200, "unit": "g", "aisle": "frozen", "isPrimaryProtein": false, "substitute": "fresh berries" },
+      { "name": "Greek yoghurt", "quantity": 100, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null }
+    ],
+    "method": [
+      "Blend oats into a flour. Mix with protein powder and baking powder.",
+      "Whisk eggs and milk together. Combine with dry ingredients until smooth.",
+      "Heat a non-stick pan over medium-low. Cook 2-3 tbsp batter per pancake, 2 min per side.",
+      "Warm berries in a small saucepan.",
+      "Serve pancakes with berries and Greek yoghurt."
+    ]
+  },
+  {
+    "id": "berry-crumble",
+    "name": "Berry Protein Crumble",
+    "cuisine": "British",
+    "mealTypes": ["treat"],
+    "prepTime": 10,
+    "cookTime": 25,
+    "defaultBatchSize": 4,
+    "prepNotes": "Assemble and refrigerate unbaked up to 24h. Serve warm with Greek yoghurt instead of cream.",
+    "macrosPerServing": {
+      "calories": 285,
+      "protein": 14,
+      "carbs": 34,
+      "fat": 10
+    },
+    "ingredients": [
+      { "name": "mixed frozen berries", "quantity": 600, "unit": "g", "aisle": "frozen", "isPrimaryProtein": false, "substitute": "fresh berries" },
+      { "name": "rolled oats", "quantity": 120, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": null },
+      { "name": "vanilla protein powder", "quantity": 60, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": true, "substitute": null },
+      { "name": "butter", "quantity": 40, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": "coconut oil" },
+      { "name": "honey", "quantity": 40, "unit": "ml", "aisle": "cupboard", "isPrimaryProtein": false, "substitute": "maple syrup" },
+      { "name": "Greek yoghurt", "quantity": 150, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null }
+    ],
+    "method": [
+      "Pour frozen berries into an ovenproof dish. Sprinkle with 1 tbsp honey.",
+      "Mix oats, protein powder, butter and remaining honey until crumbly.",
+      "Spread crumble over berries.",
+      "Bake at 190°C for 25 min until topping is golden and fruit is bubbling.",
+      "Serve warm with Greek yoghurt."
+    ]
   }
 ]

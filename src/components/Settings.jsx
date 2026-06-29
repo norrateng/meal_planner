@@ -1,5 +1,9 @@
 import { useState } from 'react'
 import { saveSettings, saveRatings } from '../utils/storage'
+import recipes from '../data/recipes.json'
+
+const CUISINES = [...new Set(recipes.map(r => r.cuisine).filter(c => c !== 'Supplement'))].sort()
+const DEFAULT_SHARE = Math.round(100 / CUISINES.length)
 
 export default function Settings({ settings, onUpdate }) {
   const [local, setLocal] = useState(settings)
@@ -15,6 +19,20 @@ export default function Settings({ settings, onUpdate }) {
     saveRatings({})
     alert('Ratings reset. Regenerate your plan to see the effect.')
   }
+
+  function updateCuisineWeight(cuisine, value) {
+    const next = { ...(local.cuisineWeights ?? {}), [cuisine]: value }
+    update({ cuisineWeights: next })
+  }
+
+  function resetCuisineWeights() {
+    update({ cuisineWeights: {} })
+  }
+
+  const weightsTotal = CUISINES.reduce(
+    (sum, c) => sum + (local.cuisineWeights?.[c] ?? DEFAULT_SHARE),
+    0
+  )
 
   return (
     <div className="p-4 space-y-6">
@@ -101,6 +119,35 @@ export default function Settings({ settings, onUpdate }) {
             <button onClick={() => update({ useImperial: true })} className={`px-3 py-1.5 ${local.useImperial ? 'bg-green-600 text-white' : 'bg-white text-gray-600'}`}>Imperial</button>
           </div>
         </div>
+      </section>
+
+      <section className="bg-white rounded-2xl border border-gray-200 divide-y divide-gray-100">
+        <div className="px-4 py-3 flex items-center justify-between">
+          <div>
+            <p className="text-sm font-medium text-gray-800">Cuisine preferences</p>
+            <p className="text-xs text-gray-500 mt-0.5">Set how often each cuisine appears. Values should total 100%.</p>
+            <p className={`text-xs mt-1 font-semibold ${weightsTotal === 100 ? 'text-green-600' : 'text-red-500'}`}>
+              Total: {weightsTotal}%
+            </p>
+          </div>
+          <button onClick={resetCuisineWeights} className="text-xs text-gray-600 border border-gray-200 bg-gray-50 px-2.5 py-1.5 rounded-lg shrink-0">
+            Reset equal
+          </button>
+        </div>
+        {CUISINES.map(cuisine => (
+          <div key={cuisine} className="px-4 py-2 flex items-center gap-3">
+            <span className="text-sm text-gray-700 flex-1">{cuisine}</span>
+            <input
+              type="number"
+              min={0}
+              max={100}
+              value={local.cuisineWeights?.[cuisine] ?? DEFAULT_SHARE}
+              onChange={e => updateCuisineWeight(cuisine, Number(e.target.value))}
+              className="w-16 border border-gray-200 rounded-lg px-2 py-1 text-sm text-center"
+            />
+            <span className="text-sm text-gray-500 w-4">%</span>
+          </div>
+        ))}
       </section>
 
       <section className="bg-white rounded-2xl border border-gray-200 divide-y divide-gray-100">

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import recipes from '../data/recipes.json'
 import { getWeight } from '../utils/planGenerator'
 
-const SLOT_LABEL = { lunch: 'Lunch', dinner: 'Dinner', treat: 'Treat' }
+const SLOT_LABEL = { lunch: 'Lunch', dinner: 'Dinner', treat: 'Treat', sides: 'Sides' }
 
 export default function SwapPicker({ day, slot, plan, ratings, cupboard, onSelect, onClose }) {
   const [search, setSearch] = useState('')

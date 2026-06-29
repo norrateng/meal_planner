@@ -1,8 +1,8 @@
 import { getRecipe } from '../utils/planStore'
 import { getEffectiveMacros } from '../utils/nutritionAdjuster'
 
-const SLOT_LABEL = { lunch: 'Lunch', dinner: 'Dinner', treat: 'Treat' }
-const SLOT_DOT = { lunch: 'bg-amber-400', dinner: 'bg-blue-400', treat: 'bg-pink-400' }
+const SLOT_LABEL = { lunch: 'Lunch', dinner: 'Dinner', treat: 'Treat', sides: 'Sides' }
+const SLOT_DOT = { lunch: 'bg-amber-400', dinner: 'bg-blue-400', treat: 'bg-pink-400', sides: 'bg-purple-400' }
 
 export default function MealCard({ entry, slot, rating, onOpen, onRate, onSwap, onMarkEaten }) {
   const recipe = getRecipe(entry.recipeId)

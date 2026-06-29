@@ -71,20 +71,20 @@ describe('deductCookedIngredients', () => {
     {
       day: 0,
       slots: {
-        lunch: { recipeId: 'test-recipe', batchSize: 2, isBatchRepeat: false, adjustments: null },
+        lunch: { recipeId: 'test-recipe', batchSize: 2, isBatchRepeat: false, eaten: true, adjustments: null },
         dinner: null,
       },
     },
     {
       day: 1,
       slots: {
-        lunch: { recipeId: 'test-recipe', batchSize: 2, isBatchRepeat: true, adjustments: null },
+        lunch: { recipeId: 'test-recipe', batchSize: 2, isBatchRepeat: true, eaten: true, adjustments: null },
         dinner: null,
       },
     },
   ]
 
-  it('deducts ingredients for non-repeat slots only', () => {
+  it('deducts ingredients for eaten non-repeat slots only', () => {
     const cupboard = [
       { name: 'chicken breast', quantity: 700, unit: 'g', addedOn: 0 },
       { name: 'onion', quantity: 5, unit: 'whole', addedOn: 0 },
@@ -113,5 +113,21 @@ describe('deductCookedIngredients', () => {
     const chicken = result.find(i => i.name === 'chicken breast')
     // 600g deducted (day 0 only), 100g remaining
     expect(chicken.quantity).toBeCloseTo(100)
+  })
+
+  it('ignores slots that have not been marked as eaten', () => {
+    const uneatenPlan = [
+      {
+        day: 0,
+        slots: {
+          lunch: { recipeId: 'test-recipe', batchSize: 2, isBatchRepeat: false, eaten: false, adjustments: null },
+          dinner: null,
+        },
+      },
+    ]
+    const cupboard = [{ name: 'chicken breast', quantity: 700, unit: 'g', addedOn: 0 }]
+    const result = deductCookedIngredients(uneatenPlan, cupboard, recipes)
+    // Nothing deducted — meal not marked eaten
+    expect(result.find(i => i.name === 'chicken breast').quantity).toBeCloseTo(700)
   })
 })

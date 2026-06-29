@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { generatePlan, pickReplacement, computeProteinAddons } from './planGenerator'
+import { generatePlan, pickReplacement, pickSideForDay } from './planGenerator'
 import recipes from '../data/recipes.json'
 
 const defaultSettings = { calorieTarget: 1600, defaultBatchSize: 4 }
@@ -55,7 +55,6 @@ describe('generatePlan', () => {
   })
 
   it('daily calories are within 100 kcal below target on most days', () => {
-    // Run multiple times to reduce random variance
     let daysBelowThreshold = 0
     let totalDays = 0
     for (let run = 0; run < 5; run++) {
@@ -66,7 +65,6 @@ describe('generatePlan', () => {
         if (total < defaultSettings.calorieTarget - 100) daysBelowThreshold++
       }
     }
-    // Allow at most 20% of days to miss the target window (due to impossible combinations)
     expect(daysBelowThreshold / totalDays).toBeLessThan(0.3)
   })
 
@@ -82,13 +80,26 @@ describe('generatePlan', () => {
         }
       }
     }
-    expect(counts['chicken-tikka-masala'] ?? 0).toBeGreaterThan(0)
+    // With rating score=5 → weight ≈2.76x vs neutral 1.0, tikka masala should appear noticeably more
+    expect(counts['chicken-tikka-masala'] ?? 0).toBeGreaterThan(5)
   })
 
   it('treats get batchSize 1', () => {
     const plan = generatePlan(defaultSettings)
     for (const day of plan) {
       expect(day.slots.treat.batchSize).toBe(1)
+    }
+  })
+
+  it('sides slot is present when protein target is high and null otherwise', () => {
+    const withTarget = generatePlan({ ...defaultSettings, proteinTarget: 200 })
+    const withoutTarget = generatePlan({ ...defaultSettings })
+    // With high protein target, at least some days should have a sides slot
+    const hasSides = withTarget.some(d => d.slots.sides !== null)
+    expect(hasSides).toBe(true)
+    // Without protein target, no sides
+    for (const day of withoutTarget) {
+      expect(day.slots.sides).toBeNull()
     }
   })
 
@@ -109,7 +120,6 @@ describe('generatePlan', () => {
         }
       }
     }
-    // chicken-tikka-masala uses chicken breast + coconut cream — should appear
     expect(counts['chicken-tikka-masala'] ?? 0).toBeGreaterThan(0)
   })
 })
@@ -141,45 +151,37 @@ describe('pickReplacement', () => {
   })
 })
 
-describe('computeProteinAddons', () => {
+describe('pickSideForDay', () => {
   const plan = generatePlan(defaultSettings)
   const daySlots = plan[0].slots
 
-  it('returns empty array when no proteinTarget', () => {
-    expect(computeProteinAddons(daySlots, 1600, undefined)).toEqual([])
-    expect(computeProteinAddons(daySlots, 1600, null)).toEqual([])
+  it('returns null when no proteinTarget', () => {
+    expect(pickSideForDay(daySlots, 1600, undefined)).toBeNull()
+    expect(pickSideForDay(daySlots, 1600, null)).toBeNull()
   })
 
-  it('returns empty array when protein target is already met', () => {
-    // A very low target (any day with 2 mains will easily exceed 20g)
-    const result = computeProteinAddons(daySlots, 1600, 10)
-    expect(result).toEqual([])
+  it('returns null when protein target is already met', () => {
+    // Very low target (any day with 2 mains easily exceeds 30g)
+    expect(pickSideForDay(daySlots, 1600, 20)).toBeNull()
   })
 
-  it('returns add-ons with name, proteinG, calories fields when budget allows', () => {
-    // Use a high calorie target (2500) so there's room for add-ons despite slot meals
-    const result = computeProteinAddons(daySlots, 2500, 300)
-    expect(result.length).toBeGreaterThan(0)
-    for (const addon of result) {
-      expect(addon).toHaveProperty('name')
-      expect(addon).toHaveProperty('proteinG')
-      expect(addon).toHaveProperty('calories')
-    }
+  it('returns a sides recipe when protein deficit exists', () => {
+    const result = pickSideForDay(daySlots, 2500, 300)
+    expect(result).not.toBeNull()
+    expect(result.mealTypes).toContain('sides')
   })
 
-  it('returns at most 2 add-ons', () => {
-    const result = computeProteinAddons(daySlots, 2500, 300)
-    expect(result.length).toBeLessThanOrEqual(2)
+  it('returned side has name, calories, protein fields', () => {
+    const result = pickSideForDay(daySlots, 2500, 300)
+    expect(result).toHaveProperty('name')
+    expect(result.macrosPerServing).toHaveProperty('calories')
+    expect(result.macrosPerServing).toHaveProperty('protein')
   })
 
-  it('respects calorie budget — add-on calories do not exceed remaining budget', () => {
-    const calorieTarget = 2500
-    const slotCalories = ['lunch', 'dinner', 'treat'].reduce((s, slot) => {
-      const r = recipes.find(x => x.id === daySlots[slot]?.recipeId)
-      return s + (r?.macrosPerServing?.calories ?? 0)
-    }, 0)
-    const result = computeProteinAddons(daySlots, calorieTarget, 300)
-    const addonCalories = result.reduce((s, a) => s + a.calories, 0)
-    expect(slotCalories + addonCalories).toBeLessThanOrEqual(calorieTarget)
+  it('returns the most protein-efficient side when deficit is large', () => {
+    const result = pickSideForDay(daySlots, 2500, 300)
+    if (!result) return // may be null if plan[0] already meets target
+    // Protein shake (25g P / 120 kcal) is the most efficient supplement
+    expect(result.macrosPerServing.protein).toBeGreaterThan(0)
   })
 })

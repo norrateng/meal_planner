@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { buildShoppingList, AISLE_ORDER } from '../utils/shoppingList'
-import { loadCurrentPlan, addToCupboard, consumeFromCupboard } from '../utils/storage'
+import { loadCurrentPlan, addToCupboard, consumeFromCupboard, loadShoppingChecked, saveShoppingChecked } from '../utils/storage'
 import { formatQuantity } from '../utils/units'
 
 const AISLE_ICONS = {
@@ -26,7 +26,7 @@ function exportAsText(grouped, useImperial) {
 
 export default function ShoppingList({ settings, onCupboardChange }) {
   const plan = loadCurrentPlan()
-  const [checked, setChecked] = useState({})
+  const [checked, setChecked] = useState(() => loadShoppingChecked())
 
   if (!plan) return <div className="p-6 text-center text-gray-500">No plan yet. Generate a week first.</div>
 
@@ -38,7 +38,9 @@ export default function ShoppingList({ settings, onCupboardChange }) {
 
   function toggle(key, item) {
     const wasChecked = !!checked[key]
-    setChecked(prev => ({ ...prev, [key]: !wasChecked }))
+    const next = { ...checked, [key]: !wasChecked }
+    setChecked(next)
+    saveShoppingChecked(next)
     if (!wasChecked) {
       addToCupboard([{ name: item.name, quantity: item.quantity, unit: item.unit }])
     } else {

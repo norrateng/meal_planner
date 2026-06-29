@@ -3,23 +3,20 @@ import { getEffectiveMacros } from '../utils/nutritionAdjuster'
 
 const DAY_NAMES = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
-function dayTotals(slots, proteinAddons = []) {
-  const fromSlots = ['lunch', 'dinner', 'treat'].reduce((acc, s) => {
+function dayTotals(slots) {
+  return ['lunch', 'dinner', 'treat', 'sides'].reduce((acc, s) => {
+    if (!slots[s]) return acc
     const macros = getEffectiveMacros(slots[s]?.recipeId, slots[s]?.adjustments)
     return {
       calories: acc.calories + (macros?.calories ?? 0),
       protein: acc.protein + (macros?.protein ?? 0),
     }
   }, { calories: 0, protein: 0 })
-  return {
-    calories: fromSlots.calories + proteinAddons.reduce((s, a) => s + a.calories, 0),
-    protein: fromSlots.protein + proteinAddons.reduce((s, a) => s + a.proteinG, 0),
-  }
 }
 
 export default function DayCard({ dayData, ratings, onOpenMeal, onRate, onSwap, onMarkEaten, calorieTarget, proteinTarget }) {
   const { day, slots } = dayData
-  const { calories, protein } = dayTotals(slots, dayData.proteinAddons)
+  const { calories, protein } = dayTotals(slots)
   const calOver = calories > calorieTarget
   const proteinMet = proteinTarget ? protein >= proteinTarget : null
 
@@ -40,7 +37,7 @@ export default function DayCard({ dayData, ratings, onOpenMeal, onRate, onSwap, 
       </div>
 
       <div className="p-1.5 flex flex-col gap-1">
-        {['lunch', 'dinner', 'treat'].map(slot => (
+        {['lunch', 'dinner', 'treat', 'sides'].map(slot => (
           slots[slot] && (
             <MealCard
               key={slot}
@@ -54,11 +51,6 @@ export default function DayCard({ dayData, ratings, onOpenMeal, onRate, onSwap, 
             />
           )
         ))}
-        {dayData.proteinAddons?.length > 0 && (
-          <div className="px-2 pb-1 pt-0.5 text-xs text-gray-400 italic">
-            + {dayData.proteinAddons.map(a => `${a.name} (${a.proteinG}g P)`).join(', ')}
-          </div>
-        )}
       </div>
     </div>
   )

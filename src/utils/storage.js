@@ -4,6 +4,7 @@ const KEYS = {
   ratings: 'mp_ratings',
   history: 'mp_history',
   cupboard: 'mp_cupboard',
+  shoppingChecked: 'mp_shoppingChecked',
 }
 
 const DEFAULTS = {
@@ -103,6 +104,18 @@ export function consumeFromCupboard(ingredients) {
   }).filter(Boolean)
   saveCupboard(updated)
   return updated
+}
+
+export function loadShoppingChecked() {
+  return read(KEYS.shoppingChecked) ?? {}
+}
+
+export function saveShoppingChecked(checked) {
+  write(KEYS.shoppingChecked, checked)
+}
+
+export function clearShoppingChecked() {
+  clear(KEYS.shoppingChecked)
 }
 
 export { KEYS, DEFAULTS }

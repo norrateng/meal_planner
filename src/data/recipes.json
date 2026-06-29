@@ -4410,5 +4410,118 @@
       "Bake at 180°C for 25 min until apples are tender.",
       "Serve warm with a dollop of Greek yoghurt."
     ]
+  },
+  {
+    "id": "side-protein-shake",
+    "name": "Protein shake",
+    "cuisine": "Supplement",
+    "mealTypes": ["sides"],
+    "prepTime": 2,
+    "cookTime": 0,
+    "defaultBatchSize": 1,
+    "prepNotes": "Mix 1 scoop of protein powder with 300ml water or milk.",
+    "macrosPerServing": { "calories": 120, "protein": 25, "carbs": 5, "fat": 2 },
+    "ingredients": [
+      { "name": "Protein powder", "quantity": 30, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": true, "substitute": "Plant-based protein powder" }
+    ]
+  },
+  {
+    "id": "side-greek-yoghurt",
+    "name": "Greek yoghurt pot",
+    "cuisine": "Supplement",
+    "mealTypes": ["sides"],
+    "prepTime": 1,
+    "cookTime": 0,
+    "defaultBatchSize": 1,
+    "prepNotes": "Serve with a drizzle of honey or a handful of berries if desired.",
+    "macrosPerServing": { "calories": 120, "protein": 18, "carbs": 8, "fat": 4 },
+    "ingredients": [
+      { "name": "Greek yoghurt", "quantity": 200, "unit": "g", "aisle": "dairy", "isPrimaryProtein": true, "substitute": null }
+    ]
+  },
+  {
+    "id": "side-scrambled-eggs",
+    "name": "Scrambled eggs",
+    "cuisine": "Supplement",
+    "mealTypes": ["sides"],
+    "prepTime": 2,
+    "cookTime": 5,
+    "defaultBatchSize": 1,
+    "prepNotes": "Cook low and slow in butter for creamier eggs.",
+    "macrosPerServing": { "calories": 160, "protein": 12, "carbs": 1, "fat": 11 },
+    "ingredients": [
+      { "name": "Eggs", "quantity": 2, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": true, "substitute": null },
+      { "name": "Butter", "quantity": 10, "unit": "g", "aisle": "dairy", "isPrimaryProtein": false, "substitute": null }
+    ]
+  },
+  {
+    "id": "side-cottage-cheese",
+    "name": "Cottage cheese",
+    "cuisine": "Supplement",
+    "mealTypes": ["sides"],
+    "prepTime": 1,
+    "cookTime": 0,
+    "defaultBatchSize": 1,
+    "prepNotes": "Season with black pepper and serve with cucumber slices or crackers.",
+    "macrosPerServing": { "calories": 120, "protein": 18, "carbs": 3, "fat": 3 },
+    "ingredients": [
+      { "name": "Cottage cheese", "quantity": 150, "unit": "g", "aisle": "dairy", "isPrimaryProtein": true, "substitute": null }
+    ]
+  },
+  {
+    "id": "side-boiled-eggs",
+    "name": "Boiled eggs",
+    "cuisine": "Supplement",
+    "mealTypes": ["sides"],
+    "prepTime": 1,
+    "cookTime": 8,
+    "defaultBatchSize": 1,
+    "prepNotes": "Soft boil 6-7 minutes, hard boil 9-10 minutes. Peel and season with salt.",
+    "macrosPerServing": { "calories": 140, "protein": 12, "carbs": 1, "fat": 10 },
+    "ingredients": [
+      { "name": "Eggs", "quantity": 2, "unit": "whole", "aisle": "dairy", "isPrimaryProtein": true, "substitute": null }
+    ]
+  },
+  {
+    "id": "side-tuna-tin",
+    "name": "Tin of tuna",
+    "cuisine": "Supplement",
+    "mealTypes": ["sides"],
+    "prepTime": 2,
+    "cookTime": 0,
+    "defaultBatchSize": 1,
+    "prepNotes": "Drain and serve with lemon juice and black pepper on crackers or toast.",
+    "macrosPerServing": { "calories": 120, "protein": 28, "carbs": 0, "fat": 1 },
+    "ingredients": [
+      { "name": "Tinned tuna (in brine)", "quantity": 1, "unit": "whole", "aisle": "cupboard", "isPrimaryProtein": true, "substitute": "Tinned salmon" }
+    ]
+  },
+  {
+    "id": "side-edamame",
+    "name": "Edamame",
+    "cuisine": "Supplement",
+    "mealTypes": ["sides"],
+    "prepTime": 1,
+    "cookTime": 5,
+    "defaultBatchSize": 1,
+    "prepNotes": "Boil or microwave from frozen for 4-5 minutes. Season with sea salt.",
+    "macrosPerServing": { "calories": 175, "protein": 12, "carbs": 12, "fat": 6 },
+    "ingredients": [
+      { "name": "Edamame beans (frozen)", "quantity": 150, "unit": "g", "aisle": "frozen", "isPrimaryProtein": true, "substitute": "Broad beans (frozen)" }
+    ]
+  },
+  {
+    "id": "side-mixed-nuts",
+    "name": "Mixed nuts",
+    "cuisine": "Supplement",
+    "mealTypes": ["sides"],
+    "prepTime": 1,
+    "cookTime": 0,
+    "defaultBatchSize": 1,
+    "prepNotes": "Choose unsalted mixed nuts. A 40g handful makes a protein-rich snack.",
+    "macrosPerServing": { "calories": 245, "protein": 8, "carbs": 5, "fat": 20 },
+    "ingredients": [
+      { "name": "Mixed nuts", "quantity": 40, "unit": "g", "aisle": "cupboard", "isPrimaryProtein": true, "substitute": null }
+    ]
   }
 ]

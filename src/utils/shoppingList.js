@@ -22,7 +22,7 @@ export function buildShoppingList(plan) {
   const aggregated = {} // name -> { quantity, unit, substitute, aisle, sharedIn }
 
   for (const day of plan) {
-    for (const slot of ['lunch', 'dinner', 'treat']) {
+    for (const slot of ['lunch', 'dinner', 'treat', 'sides']) {
       const entry = day.slots[slot]
       if (!entry || entry.isBatchRepeat) continue // skip repeats
 

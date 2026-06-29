@@ -1,18 +1,28 @@
 import { useState, useCallback } from 'react'
-import { generatePlan, pickReplacement, computeProteinAddons } from './planGenerator'
+import { generatePlan, pickReplacement, pickSideForDay } from './planGenerator'
 import { applyBatchSchedule } from './batchScheduler'
-import { loadCurrentPlan, saveCurrentPlan, loadRatings, saveRatings, archiveCurrentPlan } from './storage'
+import {
+  loadCurrentPlan, saveCurrentPlan, loadRatings, saveRatings, archiveCurrentPlan,
+  clearShoppingChecked,
+} from './storage'
 import recipes from '../data/recipes.json'
 
 export function getRecipe(id) {
   return recipes.find(r => r.id === id) ?? null
 }
 
-function applyProteinAddons(plan, settings) {
-  return plan.map(d => ({
-    ...d,
-    proteinAddons: computeProteinAddons(d.slots, settings.calorieTarget ?? 1600, settings.proteinTarget),
-  }))
+function makeSideEntry(day, recipe) {
+  return { day, slot: 'sides', recipeId: recipe.id, batchSize: 1, batchGroupId: null, isBatchRepeat: false, adjustments: null, locked: false }
+}
+
+function applyPickSides(plan, settings) {
+  return plan.map(d => {
+    const sideRecipe = pickSideForDay(d.slots, settings.calorieTarget ?? 1600, settings.proteinTarget)
+    return {
+      ...d,
+      slots: { ...d.slots, sides: sideRecipe ? makeSideEntry(d.day, sideRecipe) : null },
+    }
+  })
 }
 
 export function usePlanStore(settings, cupboard = []) {
@@ -20,7 +30,7 @@ export function usePlanStore(settings, cupboard = []) {
     const stored = loadCurrentPlan()
     if (stored) return stored
     const ratings = loadRatings()
-    const generated = applyProteinAddons(applyBatchSchedule(generatePlan(settings, ratings, cupboard)), settings)
+    const generated = applyBatchSchedule(generatePlan(settings, ratings, cupboard))
     saveCurrentPlan(generated)
     return generated
   })
@@ -28,7 +38,8 @@ export function usePlanStore(settings, cupboard = []) {
   const [ratings, setRatingsState] = useState(() => loadRatings())
 
   const regenerate = useCallback(() => {
-    const newPlan = applyProteinAddons(applyBatchSchedule(generatePlan(settings, ratings, cupboard)), settings)
+    clearShoppingChecked()
+    const newPlan = applyBatchSchedule(generatePlan(settings, ratings, cupboard))
     saveCurrentPlan(newPlan)
     setPlanState(newPlan)
   }, [settings, ratings, cupboard])
@@ -57,7 +68,6 @@ export function usePlanStore(settings, cupboard = []) {
       let next
 
       if (groupId) {
-        // Propagate to all entries sharing this batchGroupId (cook day + repeats)
         next = prev.map(d => ({
           ...d,
           slots: Object.fromEntries(
@@ -77,9 +87,10 @@ export function usePlanStore(settings, cupboard = []) {
         )
       }
 
-      const withAddons = applyProteinAddons(next, settings)
-      saveCurrentPlan(withAddons)
-      return withAddons
+      // Recompute sides for all days whenever a main meal changes
+      const result = slot !== 'sides' ? applyPickSides(next, settings) : next
+      saveCurrentPlan(result)
+      return result
     })
   }, [settings, ratings, cupboard])
 
@@ -97,7 +108,8 @@ export function usePlanStore(settings, cupboard = []) {
 
   const archiveAndRegenerate = useCallback((weekLabel) => {
     archiveCurrentPlan(plan, weekLabel)
-    const newPlan = applyProteinAddons(applyBatchSchedule(generatePlan(settings, ratings, cupboard)), settings)
+    clearShoppingChecked()
+    const newPlan = applyBatchSchedule(generatePlan(settings, ratings, cupboard))
     saveCurrentPlan(newPlan)
     setPlanState(newPlan)
   }, [plan, settings, ratings, cupboard])

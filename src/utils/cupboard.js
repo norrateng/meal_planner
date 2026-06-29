@@ -27,7 +27,7 @@ export function deductCookedIngredients(plan, cupboard, recipes) {
   for (const day of plan) {
     for (const slotName of ['lunch', 'dinner']) {
       const entry = day.slots[slotName]
-      if (!entry || entry.isBatchRepeat) continue
+      if (!entry || entry.isBatchRepeat || !entry.eaten) continue
       const recipe = recipes.find(r => r.id === entry.recipeId)
       if (!recipe) continue
 

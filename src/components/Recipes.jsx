@@ -2,7 +2,8 @@ import { useState } from 'react'
 import recipes from '../data/recipes.json'
 import RecipeView from './RecipeView'
 
-const allCuisines = [...new Set(recipes.map(r => r.cuisine))].sort()
+const mainRecipes = recipes.filter(r => !r.mealTypes.includes('sides'))
+const allCuisines = [...new Set(mainRecipes.map(r => r.cuisine))].sort()
 const allMealTypes = ['lunch', 'dinner', 'treat']
 
 export default function Recipes() {
@@ -11,7 +12,7 @@ export default function Recipes() {
   const [mealTypeFilter, setMealTypeFilter] = useState(null)
   const [selectedRecipe, setSelectedRecipe] = useState(null)
 
-  const filtered = recipes
+  const filtered = mainRecipes
     .filter(r => !search || r.name.toLowerCase().includes(search.toLowerCase()))
     .filter(r => !cuisineFilter || r.cuisine === cuisineFilter)
     .filter(r => !mealTypeFilter || r.mealTypes.includes(mealTypeFilter))

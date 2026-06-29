@@ -1,42 +1,14 @@
 import recipes from '../data/recipes.json'
 import { getCupboardScore } from './cupboard'
 
-const PROTEIN_ADDONS = [
-  { name: 'Fried eggs (2)', proteinG: 12, calories: 160 },
-  { name: 'Greek yoghurt (150g)', proteinG: 10, calories: 90 },
-  { name: 'Cottage cheese (100g)', proteinG: 12, calories: 100 },
-  { name: 'Protein shake', proteinG: 25, calories: 120 },
-  { name: 'Bacon (2 rashers)', proteinG: 8, calories: 100 },
-]
-
-export function computeProteinAddons(daySlots, calorieTarget, proteinTarget) {
-  if (!proteinTarget) return []
-  const slotProtein = ['lunch', 'dinner', 'treat'].reduce((s, slot) => {
-    const r = recipes.find(x => x.id === daySlots[slot]?.recipeId)
-    return s + (r?.macrosPerServing?.protein ?? 0)
-  }, 0)
-  const slotCalories = ['lunch', 'dinner', 'treat'].reduce((s, slot) => {
-    const r = recipes.find(x => x.id === daySlots[slot]?.recipeId)
-    return s + (r?.macrosPerServing?.calories ?? 0)
-  }, 0)
-  let deficit = proteinTarget - slotProtein
-  if (deficit <= 0) return []
-  let calBudget = calorieTarget - slotCalories
-  const sorted = [...PROTEIN_ADDONS].sort((a, b) => (b.proteinG / b.calories) - (a.proteinG / a.calories))
-  const chosen = []
-  for (const addon of sorted) {
-    if (chosen.length >= 2 || deficit <= 0) break
-    if (addon.calories > calBudget) continue
-    chosen.push(addon)
-    deficit -= addon.proteinG
-    calBudget -= addon.calories
-  }
-  return chosen
-}
-
+/**
+ * Returns a weight for a recipe based on its rating and cupboard availability.
+ * Uses exponential scaling so a 10-upvote recipe is ~7.6x more likely than neutral,
+ * and a 10-downvote recipe is ~0.13x (very rarely shown).
+ */
 export function getWeight(recipeId, ratings, cupboard = []) {
   const score = ratings[recipeId] ?? 0
-  const ratingWeight = Math.max(0.1, Math.min(3.0, 1.0 + score * 0.3))
+  const ratingWeight = Math.max(0.05, 1.5 ** (score * 0.5))
   const recipe = recipes.find(r => r.id === recipeId)
   const cupboardBonus = recipe ? 1 + getCupboardScore(recipe, cupboard) * 2 : 1
   return ratingWeight * cupboardBonus
@@ -59,38 +31,69 @@ function sumCalories(...mealRecipes) {
   return mealRecipes.reduce((s, r) => s + (r?.macrosPerServing?.calories ?? 0), 0)
 }
 
-
 /**
- * After picking lunch/dinner/treat, try to find the best-calorie combination
- * of lunch+dinner that brings the total within ±100 of calorieTarget.
- * Tries pairs from the top-calorie candidates to close multi-slot gaps.
+ * After picking lunch/dinner/treat, try to find the best lunch+dinner pair
+ * that brings the total within ±100 of calorieTarget without exceeding it.
+ * Among pairs that hit the target window, prefers highest combined rating weight.
+ * Falls back to the closest-calorie pair if no pair reaches the window.
  */
-function upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTarget) {
+function upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTarget, ratings, cupboard) {
   const treatCal = treat.macrosPerServing.calories
-  const total = sumCalories(lunch, dinner, treat)
-  if (total >= calorieTarget - 100) return { lunch, dinner }
+  const currentTotal = sumCalories(lunch, dinner, treat)
+  if (currentTotal >= calorieTarget - 100) return { lunch, dinner }
 
-  const lunchTop = [...lunchPool].sort((a, b) => b.macrosPerServing.calories - a.macrosPerServing.calories).slice(0, 10)
-  const dinnerTop = [...dinnerPool].sort((a, b) => b.macrosPerServing.calories - a.macrosPerServing.calories).slice(0, 10)
+  let bestInWindow = null
+  let bestWindowScore = -Infinity
+  let bestBelow = { lunch, dinner }
+  let bestBelowCal = currentTotal
 
-  let bestLunch = lunch, bestDinner = dinner, bestTotal = total
-
-  for (const l of lunchTop) {
-    for (const d of dinnerTop) {
+  for (const l of lunchPool) {
+    for (const d of dinnerPool) {
       if (l.id === d.id) continue
       const t = l.macrosPerServing.calories + d.macrosPerServing.calories + treatCal
-      if (t <= calorieTarget && t > bestTotal) {
-        bestLunch = l
-        bestDinner = d
-        bestTotal = t
-        if (t >= calorieTarget - 100) return { lunch: bestLunch, dinner: bestDinner }
+      if (t > calorieTarget) continue
+
+      if (t >= calorieTarget - 100) {
+        const score = getWeight(l.id, ratings, cupboard) * getWeight(d.id, ratings, cupboard)
+        if (score > bestWindowScore) {
+          bestWindowScore = score
+          bestInWindow = { lunch: l, dinner: d }
+        }
+      } else if (t > bestBelowCal) {
+        bestBelowCal = t
+        bestBelow = { lunch: l, dinner: d }
       }
     }
   }
 
-  return { lunch: bestLunch, dinner: bestDinner }
+  return bestInWindow ?? bestBelow
 }
 
+/**
+ * Picks an optional Sides/Snacks recipe to supplement protein when the day's meals
+ * fall short of the protein target. Sides are additive — they may take the total
+ * slightly above the calorie target, but the primary goal is hitting protein.
+ * Returns null if protein target is already met (within 15g).
+ */
+export function pickSideForDay(daySlots, calorieTarget, proteinTarget) {
+  if (!proteinTarget) return null
+
+  const sidesPool = recipes.filter(r => r.mealTypes.includes('sides'))
+  if (!sidesPool.length) return null
+
+  const totalProtein = ['lunch', 'dinner', 'treat'].reduce((s, slot) => {
+    const r = recipes.find(x => x.id === daySlots[slot]?.recipeId)
+    return s + (r?.macrosPerServing?.protein ?? 0)
+  }, 0)
+
+  if (proteinTarget - totalProtein <= 15) return null
+
+  // Pick the most protein-efficient side (protein per calorie)
+  return [...sidesPool].sort((a, b) =>
+    (b.macrosPerServing.protein / b.macrosPerServing.calories) -
+    (a.macrosPerServing.protein / a.macrosPerServing.calories)
+  )[0]
+}
 
 export function generatePlan(settings, ratings = {}, cupboard = []) {
   const { calorieTarget = 1600, defaultBatchSize = 4, proteinTarget } = settings
@@ -117,8 +120,8 @@ export function generatePlan(settings, ratings = {}, cupboard = []) {
 
     const treat = weightedPick(treatPool, ratings, new Set(), cupboard)
 
-    // Cap at target (over)
-    let total = sumCalories(lunch, dinner, treat)
+    // Cap at target if over
+    const total = sumCalories(lunch, dinner, treat)
     if (total > calorieTarget) {
       const sorted = [
         { recipe: lunch, pool: lunchPool, slot: 'lunch' },
@@ -139,19 +142,21 @@ export function generatePlan(settings, ratings = {}, cupboard = []) {
       }
     }
 
-    // Upgrade toward target (under by more than 100)
-    ;({ lunch, dinner } = upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTarget))
+    // Upgrade toward target using rating-weighted pair selection
+    ;({ lunch, dinner } = upgradeCalories(lunch, dinner, treat, lunchPool, dinnerPool, calorieTarget, ratings, cupboard))
 
     recentCuisines.push(lunch.cuisine, dinner.cuisine)
 
-    days.push({
-      day,
-      slots: {
-        lunch: makePlanEntry(day, 'lunch', lunch, defaultBatchSize),
-        dinner: makePlanEntry(day, 'dinner', dinner, defaultBatchSize),
-        treat: makePlanEntry(day, 'treat', treat, defaultBatchSize),
-      },
-    })
+    const slots = {
+      lunch: makePlanEntry(day, 'lunch', lunch, defaultBatchSize),
+      dinner: makePlanEntry(day, 'dinner', dinner, defaultBatchSize),
+      treat: makePlanEntry(day, 'treat', treat, defaultBatchSize),
+    }
+
+    const sideRecipe = pickSideForDay(slots, calorieTarget, proteinTarget)
+    slots.sides = sideRecipe ? makePlanEntry(day, 'sides', sideRecipe, 1) : null
+
+    days.push({ day, slots })
   }
 
   return days
@@ -168,7 +173,6 @@ export function pickReplacement(plan, day, slotName, settings, ratings = {}, cup
   const pool = recipes.filter(r => r.mealTypes.includes(slotName))
   if (pool.length === 0) return null
 
-  // Collect cuisines from adjacent days
   const adjacentCuisines = new Set()
   for (const adj of [day - 1, day + 1]) {
     if (adj >= 0 && adj < 7) {
@@ -184,7 +188,6 @@ export function pickReplacement(plan, day, slotName, settings, ratings = {}, cup
     }
   }
 
-  // Budget: calorieTarget minus the other two slots' calories
   const otherCal = ['lunch', 'dinner', 'treat']
     .filter(s => s !== slotName)
     .reduce((sum, s) => {
@@ -198,7 +201,6 @@ export function pickReplacement(plan, day, slotName, settings, ratings = {}, cup
     ...pool.filter(r => adjacentCuisines.has(r.cuisine)).map(r => r.id),
   ])
 
-  // Filter to budget-fitting candidates
   const budgeted = pool.filter(r => !exclude.has(r.id) && r.macrosPerServing.calories <= budget)
   const pickPool = budgeted.length > 0 ? budgeted : pool.filter(r => !exclude.has(r.id))
 
@@ -206,11 +208,12 @@ export function pickReplacement(plan, day, slotName, settings, ratings = {}, cup
 }
 
 function makePlanEntry(day, slot, recipe, batchSize) {
+  const isNoBatch = recipe.mealTypes.includes('treat') || recipe.mealTypes.includes('sides')
   return {
     day,
     slot,
     recipeId: recipe.id,
-    batchSize: recipe.mealTypes.includes('treat') ? 1 : batchSize,
+    batchSize: isNoBatch ? 1 : batchSize,
     batchGroupId: null,
     isBatchRepeat: false,
     adjustments: null,
